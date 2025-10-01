@@ -36,6 +36,15 @@ const Home = () => {
     });
   };
 
+  const handleDownloadCV = (): void => {
+    const link = document.createElement("a");
+    link.href = "/Lebenslauf_TheQuanVu.pdf"; 
+    link.download = "Lebenslauf_TheQuanVu.pdf"; // Tên file khi tải về
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="home">
       {/* Hero background cố định cho mobile */}
@@ -75,14 +84,10 @@ const Home = () => {
           {copyMsg && <div className="copy-toast">{copyMsg}</div>}
 
           {/* CV button */}
-          <a 
-            href="/Lebenslauf_TheQuanVu.pdf" 
-            download="Lebenslauf_TheQuanVu.pdf" 
-            className="cv-btn"
-          >
+          <button onClick={handleDownloadCV} className="cv-btn">
             <FiDownload className="cv-icon" />
             <span>{t("home.downloadCV")}</span>
-          </a>
+          </button>
         </div>
 
         {/* NAV BTN */}
