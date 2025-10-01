@@ -75,7 +75,11 @@ const Home = () => {
           {copyMsg && <div className="copy-toast">{copyMsg}</div>}
 
           {/* CV button */}
-          <a href="/Lebenslauf_TheQuanVu.pdf" download className="cv-btn">
+          <a 
+            href="/Lebenslauf_TheQuanVu.pdf" 
+            download="Lebenslauf_TheQuanVu.pdf" 
+            className="cv-btn"
+          >
             <FiDownload className="cv-icon" />
             <span>{t("home.downloadCV")}</span>
           </a>
