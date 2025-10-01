@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/projects.css";
 import NavBar from "../components/navbar.tsx";
 import { useLanguage } from "../i18n/LanguageContext";
@@ -7,8 +7,6 @@ import Portfolio from "../assets/portfolio.png";
 import ChessGame from "../assets/chess.png";
 import AIWeb from "../assets/aiweb.jpeg";
 import Webserver from "../assets/webserver.png";
-
-const placeholder = "https://via.placeholder.com/600x400.png?text=Project+Image";
 
 type Project = {
   name: string;
@@ -19,7 +17,7 @@ type Project = {
   tech?: string;
   img: string;
   tags: string[];
-  category: string[]; // lưu key (cat1, cat2, ...) thay vì text dịch
+  category: string[];
   view?: { label: string; url: string }[];
   link?: { label: string; url: string }[];
 };
@@ -28,12 +26,11 @@ const Projects = () => {
   const { t } = useLanguage();
 
   const [selectedProject, setSelectedProject] = useState<null | Project>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"); // default = all
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   const handleOpen = (project: Project) => setSelectedProject(project);
   const handleClose = () => setSelectedProject(null);
 
-  // ✅ categories có key + label (label dịch theo ngôn ngữ)
   const categories = [
     { key: "all", label: t("projects.all") },
     { key: "cat1", label: t("projects.cat1") },
@@ -42,7 +39,6 @@ const Projects = () => {
     { key: "cat4", label: t("projects.cat4") },
   ];
 
-  // ✅ lọc theo key
   const matchCategory = (project: Project) => {
     if (selectedCategory === "all") return true;
     return project.category.includes(selectedCategory);
@@ -58,7 +54,6 @@ const Projects = () => {
           <span className="prj-title-bg">{t("projects.title")}</span>
         </div>
 
-        {/* ===== CATEGORY BUTTONS ===== */}
         <div className="prj-categories">
           {categories.map((cat) => (
             <button
@@ -71,7 +66,6 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* ===== GRID ===== */}
         <div className="prj-grid">
           {/* Portfolio Project */}
           {matchCategory({
@@ -95,6 +89,7 @@ const Projects = () => {
                   tags: ["TypeScript", "React", "CSS"],
                   category: ["cat1"],
                   view: [{ label: t("projects.portfolio.view"), url: "http://localhost:5173" }],
+                  link: [{ label: "GitHub", url: "https://github.com/thequanvu204/portfolio" }],
                 })
               }
             >
