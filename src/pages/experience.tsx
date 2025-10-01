@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import "../styles/experience.css";
 import NavBar from "../components/navbar.tsx";

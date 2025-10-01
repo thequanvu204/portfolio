@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaLinkedin, FaEnvelope, FaGithub} from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";

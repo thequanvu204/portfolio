@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBookOpen, FaGraduationCap, FaChevronDown } from "react-icons/fa";
 import "../styles/education.css";
 import NavBar from "../components/navbar.tsx";

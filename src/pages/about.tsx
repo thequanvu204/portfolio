@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/about.css";
 import NavBar from "../components/navbar.tsx";
 import { useLanguage } from "../i18n/LanguageContext";
