@@ -1,0 +1,479 @@
+/* ===== CONTAINER CHÍNH ===== */
+.education {
+  min-height: 100vh;          
+  padding: 2rem;
+  padding-top: 90px;         /* giống AboutMe */
+  box-sizing: border-box;
+  color: #fff;
+}
+
+/* ===== TITLE ===== */
+.edu-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.5rem;     /* giống AboutMe */
+  width: 100%;
+  color: #E0F7FA;
+}
+
+.edu-title h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.edu-title-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: 900;
+  color: #33475B;
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ===== TIMELINE ===== */
+.edu-timeline {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+  padding-right: 2%;
+  padding-top: 25px;
+}
+
+.edu-timeline::before {
+  content: "";
+  position: absolute;
+  left: 46px;
+  top: 60px;
+  bottom: 0;
+  width: 2px;
+  background: #1E88E5;
+}
+
+.edu-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* ===== ICON ===== */
+.edu-timeline-icon {
+  position: absolute;
+  top: 30px;
+  left: 28px;
+  color: #1E88E5;
+  font-size: 22px;
+  background: #001D3D;
+  border: 2px solid #1E88E5;
+  border-radius: 50%;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* ===== CARD ===== */
+.edu-timeline-card {
+  background: #001D3D;
+  border-radius: 10px;
+  margin-left: 80px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+/* ===== CARD HEADER ===== */
+.edu-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.8rem;
+  cursor: pointer;
+}
+
+.edu-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  margin-right: 1rem;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.edu-content {
+  flex-grow: 1;
+}
+
+.edu-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.edu-degree {
+  font-size: 0.95rem;
+  margin: 0;
+  color: #4FC3F7;
+}
+
+.edu-time {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4FC3F7;
+  margin-left: 1rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.edu-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.edu-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+/* ===== COLLAPSIBLE ===== */
+.collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+
+.collapsible.open {
+  max-height: 2000px;
+}
+
+/* ===== UNI DETAILS ===== */
+.uni-details {
+  background: #001D3D;
+  border-radius: 0 0 10px 10px;
+  padding: 0 1.8rem;
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.edu-timeline-card.expanded .uni-details {
+  padding: 1.2rem 1.8rem;
+  max-height: 1000px;
+}
+
+.uni-details-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+
+.uni-details-left,
+.uni-details-right {
+  flex: 1;
+}
+
+.uni-modules-title,
+.uni-details h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #4FC3F7;
+}
+
+.uni-details ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.uni-details li {
+  margin-bottom: 0.4rem;
+}
+
+/* ===== UNI MODULES ===== */
+.uni-modules {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.uni-modules-wrapper {
+  display: flex;
+  gap: 1rem;
+  min-width: max-content;
+}
+
+.uni-module {
+  width: 240px;
+  height: 110px;
+  background: #001D3D;
+  border: 2px solid #0D47A1;
+  border-radius: 8px;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  box-sizing: border-box;
+}
+
+.uni-module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.uni-module-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  color: #fff;
+  line-height: 1.3;
+  word-break: break-word;
+  max-width: calc(100% - 70px);
+}
+
+.uni-module-time {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #4FC3F7;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ===== STK DETAILS ===== */
+.stk-details {
+  background: #001D3D;
+  border-radius: 0 0 10px 10px;
+  padding: 0 1.8rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.edu-timeline-card.expanded .stk-details {
+  padding: 1.2rem 1.8rem;
+  max-height: 600px;
+}
+
+.stk-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #4FC3F7;
+}
+
+.stk-section p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.stk-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* ===== THPT DETAILS ===== */
+.thpt-details {
+  background: #001D3D;
+  border-radius: 0 0 10px 10px;
+  padding: 0 1.8rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.edu-timeline-card.expanded .thpt-details {
+  padding: 1.2rem 1.8rem;
+  max-height: 400px;
+}
+
+.thpt-footer {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+/* ===== PDF BUTTON ===== */
+.pdf-btn {
+  background: #1E88E5;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.pdf-btn:hover {
+  background: #1565C0;
+}
+
+/* ===== PDF MODAL ===== */
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ===== PDF CONTENT ===== */
+.pdf-content {
+  background: #001D3D;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  width: 90%;
+  max-width: 1000px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding: 80px 20px 20px 20px;
+  box-sizing: border-box;
+}
+
+.pdf-content iframe {
+  flex: 1;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  background: #1e293b;
+}
+
+/* ===== CLOSE BUTTON ===== */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  color: #f87171;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive cho title */
+@media (max-width: 932px) {
+  .edu-title h3,
+  .edu-title-bg {
+    white-space: normal;     /* Cho phép xuống dòng theo khoảng trắng */
+    word-break: keep-all;    /* Không cho cắt giữa từ */
+    text-align: center;      /* Giữ căn giữa */
+  }
+}
+
+/* Responsive cho title xuống đúng từ */
+@media (max-width: 480px) {
+  .edu-title h3 {
+    font-size: 1.5rem;
+  }
+
+  .edu-title-bg {
+    font-size: 3rem;
+  }
+
+  .edu-timeline::before {
+    left: 30px;        /* dịch line sát trái hơn */
+  }
+
+  .edu-timeline-icon {
+    left: 12px;        /* icon đi theo line */
+  }
+
+  .edu-timeline-card {
+    margin-left: 55px; /* dịch card gần trái hơn */
+  }
+
+  .edu-card-header {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .edu-time {
+    margin-left: 0;
+    width: 100%;           /* ép xuống dòng mới */
+  }
+
+  .uni-details-top {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .thpt-footer {
+    flex-direction: column;   /* Xếp dọc */
+    align-items: stretch;     /* Nút giãn full width nếu muốn */
+    gap: 0.6rem;              /* Khoảng cách giữa các nút */
+  }
+
+  .thpt-footer .pdf-btn {
+    width: 100%;              /* Cho nút full chiều ngang card */
+    text-align: center;
+  }
+}
+

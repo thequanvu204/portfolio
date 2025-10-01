@@ -1,0 +1,354 @@
+.projects {
+  max-width: none; /* ✔ co lại vừa màn hình nhỏ */
+  width: 100%;       /* ✔ responsive */
+  margin: 0 auto;
+  padding: 90px 15px;
+  min-height: 100vh; /* đảm bảo chiều cao tối thiểu */
+  box-sizing: border-box; 
+}
+
+/* ===== TITLE ===== */
+.prj-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.5rem;   /* khoảng cách đồng bộ */
+  width: 100%;
+  color: #E0F7FA;
+}
+
+.prj-title h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.prj-title-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: 900;
+  color: #33475B;
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ===== CATEGORY FILTER ===== */
+.prj-categories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;   /* giới hạn chiều ngang */
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+}
+
+.cat-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  border: 2px solid #1E88E5;
+  background: transparent;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;   /* giữ text không bị cắt */
+  flex-shrink: 0;        /* không bị co lại khi nhiều nút */
+}
+
+.cat-btn:hover {
+  background: #1E88E5;
+}
+
+.cat-btn.active {
+  background: #1E88E5;
+}
+
+/* ===== GRID ===== */
+.prj-grid {
+  display: grid;
+  padding: 0 15%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* ===== CARD ===== */
+.prj-card {
+  background: #001D3D;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  transition: border 0.2s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.prj-card:hover {
+  border: 2px solid #0D47A1;
+}
+
+.prj-img {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.prj-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prj-info {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  position: relative;
+}
+
+.prj-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0.3rem 0;
+  color: #fff;
+}
+
+.prj-time {
+  font-size: 1rem;
+  color: #aaa;
+  margin: 0.2rem 0;
+  text-align: left;
+}
+
+/* ===== TAGS ===== */
+.prj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+
+.tag {
+  background: #1E88E5;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+  background: #1565C0;
+}
+
+/* ===== MODAL OVERLAY ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85); /* tối hơn một chút giống Education */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ===== MODAL POPUP ===== */
+.modal-popup {
+  background: #001D3D;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  width: 1300px;     /* tăng kích thước so với trước */
+  height: 500px;     /* tăng kích thước so với trước */
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.3s ease;
+}
+
+/* ===== CLOSE BUTTON ===== */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 1.5rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #f87171;
+}
+
+/* ===== LEFT ===== */
+.modal-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #001D3D;
+  overflow: hidden;
+}
+
+.modal-left img {
+  max-width: calc(100% - 40px);
+  max-height: calc(100% - 40px);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain; /* giữ nguyên 16:9, không crop */
+}
+
+/* ===== RIGHT ===== */
+.modal-right {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.modal-right h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.modal-time {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 0.4rem 0 1rem 0;
+}
+
+.modal-desc {
+  flex: 1;
+  overflow-y: auto;
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.modal-btn {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #1E88E5;
+  border-radius: 9999px; /* pill shape */
+  background: transparent;
+  color: #1E88E5;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.modal-btn:hover {
+  background: #1E88E5; /* chỉ hover viền và nền nhạt */
+  color: white;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ≤ 932px (điện thoại quay ngang) → 2 cột */
+@media (max-width: 932px) {
+  .projects {
+    padding-top: 90px;
+  }
+
+  .prj-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 5%;
+  }
+
+  .prj-card {
+    max-width: 400px; /* giới hạn chiều rộng card */
+  }
+
+  .modal-popup {
+    flex-direction: column; /* đổi thành 1 cột */
+    width: 95%;             /* vừa màn hình */
+    height: auto;           /* co giãn theo nội dung */
+    max-height: 90vh;       /* không vượt quá chiều cao màn hình */
+  }
+
+  .modal-left {
+    width: 100%;
+    max-height: 50%;        
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 👈 đẩy ảnh xuống từ trên */
+    padding-top: 60px;       /* 👈 khoảng cách an toàn */
+  }
+
+  .modal-left img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;        /* 👈 thêm margin cho ảnh */
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+  }
+
+  .modal-right {
+    width: 100%;
+    padding: 15px;
+    overflow-y: auto;
+  }
+}
+
+/* ≤ 480px (điện thoại quay dọc) → 1 cột */
+@media (max-width: 480px) {
+  .projects {
+    padding-top: 80px;
+  }
+
+  .prj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prj-card {
+    max-width: 350px; /* giới hạn chiều rộng card */
+  }
+}

@@ -1,0 +1,50 @@
+.language-switcher {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 9999;
+  pointer-events: auto;
+  transition: opacity 0.3s ease;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.lang-btn:focus {
+  outline: none;        /* bỏ viền mặc định */
+}
+
+.lang-btn:focus-visible {
+  outline: none;        /* bỏ luôn outline khi tab bằng bàn phím */
+}
+
+.lang-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #001D3D;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.lang-menu button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  color: #E0F7FA;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lang-menu button:hover {
+  background: #0D47A1
+}

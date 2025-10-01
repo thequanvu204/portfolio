@@ -1,0 +1,156 @@
+/* ===== DESKTOP NAVBAR ===== */
+.navigator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  z-index: 1000;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #1e88e5;
+  color: white;
+  font-weight: 500;
+  border-radius: 9999px;
+  width: 40px; /* hình tròn mặc định */
+  height: 40px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-icon,
+.nav-text {
+  position: absolute;
+  transition: opacity 0.25s ease-in-out;
+}
+
+/* Icon hiển thị mặc định */
+.nav-icon {
+  opacity: 1;
+  font-size: 18px;
+}
+
+/* Text ẩn mặc định */
+.nav-text {
+  opacity: 0;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Hover desktop: mở rộng thành viên thuốc + hiện text */
+.nav-link:hover {
+  width: 200px;
+  background-color: white;
+  color: #1e88e5;
+}
+
+.nav-link:hover .nav-icon {
+  opacity: 0;
+}
+
+.nav-link:hover .nav-text {
+  opacity: 1;
+  position: static;
+}
+
+/* Active link */
+.nav-link.active {
+  font-weight: 700;
+  background-color: #0e3d66;
+  color: white;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 1.8rem;
+  color: #1e88e5;
+  cursor: pointer;
+  z-index: 1100;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hamburger:hover {
+  color: #1565c0;
+}
+
+.hamburger.open {
+  padding-left: 9px;
+  color: #1e88e5; /* khi mở đổi màu đỏ cho rõ ràng */
+}
+
+/* ===== MOBILE DROPDOWN MENU ===== */
+.mobile-dropdown {
+  position: fixed;
+  top: 60px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 1200;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  pointer-events: none; /* khi đóng không cho click */
+}
+
+.mobile-dropdown.open {
+  max-height: 500px; /* đủ lớn để chứa 5 nút */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-dropdown.closed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e88e5;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mobile-link:hover {
+  background-color: white;
+  color: #1e88e5;
+}
+
+.mobile-link.active {
+  background-color: #0e3d66;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 932px) {
+  .navigator {
+    display: none; /* ẩn navbar desktop */
+  }
+  .hamburger {
+    display: block; /* hiện hamburger */
+  }
+}

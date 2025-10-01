@@ -1,0 +1,179 @@
+/* --- Toàn trang trong class about-me --- */
+.about-me {
+  min-height: 100vh;          /* nền đen toàn trang */
+  padding: 2rem;
+  box-sizing: border-box;
+  color: white;               /* chữ mặc định: đen (vì box trắng) */
+  padding-top: 60px;
+}
+
+/* --- Container bên trong để canh lề 2 bên --- */
+.about-me .content {
+  max-width: 900px;         
+  width: 100%;
+  margin: 0 auto;            
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  gap: 1.2rem;               /* giảm khoảng cách giữa các cột */
+  align-items: stretch;
+}
+
+/* --- Title với watermark --- */
+.abt-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.5rem;     /* giảm khoảng cách dưới title */
+  width: 100%;
+  color: #E0F7FA;               /* title trắng để nổi trên nền đen */
+}
+
+.abt-title h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  z-index: 2;
+  position: relative;
+}
+
+.abt-title-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: 800;
+  color: #33475B   /* tím neon #6C63FF với opacity 7% */;
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* --- Cột trái --- */
+.abt-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;               /* giảm gap giữa Personal Info và Languages */
+  padding-top: 20px;
+}
+
+/* Skill box chiếm trọn chiều cao bên phải */
+.abt-right {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.abt-right .tech-skill {
+  flex: 1;              /* chiếm toàn bộ chiều cao còn lại */
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Box chung --- */
+.personal-info,
+.languages,
+.tech-skill {
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  background: #001D3D;          /* box nền trắng */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.personal-info h2,
+.languages h2,
+.tech-skill h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #4FC3F7;
+}
+
+/* --- Personal info --- */
+.personal-info p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+/* --- Languages --- */
+.language {
+  margin-bottom: 0.8rem;
+}
+
+.lang-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.lang-bar {
+  background: #eee;
+  border-radius: 5px;
+  height: 10px;
+  margin: 0.3rem 0;
+  overflow: hidden;
+}
+
+.lang-fill {
+  background: linear-gradient(90deg, #004266, #002153);
+  height: 100%;
+  border-radius: 5px;
+}
+
+.lang-level {
+  font-size: 0.8rem;
+  color: white;
+  float: right;
+}
+
+/* --- Skills --- */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;               /* giảm khoảng cách giữa logo */
+  align-items: center;
+  justify-items: center;
+}
+
+.skills img {
+  max-width: 45px;
+  max-height: 45px;
+  object-fit: contain;
+}
+
+/* --- Responsive --- */
+
+/* Màn hình nhỏ hơn hoặc bằng 932px */
+@media (max-width: 932px) {
+  .abt-title h3 {
+    font-size: 1.6rem;       /* nhỏ hơn mặc định */
+  }
+  .abt-title-bg {
+    font-size: 4rem;         /* watermark nhỏ lại */
+  }
+}
+
+/* Màn hình nhỏ hơn hoặc bằng 480px */
+@media (max-width: 480px) {
+  .abt-title h3 {
+    font-size: 1.3rem;       /* thu nhỏ thêm */
+  }
+  .abt-title-bg {
+    font-size: 3rem;         /* watermark nhỏ thêm */
+  }
+  
+  .about-me .content {
+    grid-template-columns: 1fr;  /* chỉ 1 cột */
+    gap: 1rem;                   /* khoảng cách giữa các box */
+  }
+
+  .abt-left {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .abt-right {
+    padding-top: 0;  /* bỏ padding-top để liền mạch */
+  }
+
+  .abt-right .tech-skill {
+    flex: unset;     /* bỏ stretch để box theo nội dung */
+  }
+}

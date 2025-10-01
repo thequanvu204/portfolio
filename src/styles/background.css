@@ -1,0 +1,48 @@
+.background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #010a14, #021024, #043354);
+}
+
+/* cụm chấm tĩnh */
+.static-dots {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 9px;
+  z-index: -1;
+}
+
+.dot-col {
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 9px;
+}
+
+.dot {
+  width: 6px;  /* dot tĩnh luôn lớn hơn dot rơi */
+  height: 6px;
+  border-radius: 50%;
+  animation: blinkStar 4s infinite ease-in-out;
+}
+
+@keyframes blinkStar {
+  0% {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 4px rgba(0, 200, 255, 0.2);
+  }
+  50% {
+    background: #00ffff; /* cyan rực */
+    box-shadow: 0 0 14px rgba(0, 255, 255, 0.9);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 4px rgba(0, 200, 255, 0.2);
+  }
+}
