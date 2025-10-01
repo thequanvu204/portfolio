@@ -88,7 +88,7 @@ const Projects = () => {
                   img: Portfolio,
                   tags: ["TypeScript", "React", "CSS"],
                   category: ["cat1"],
-                  view: [{ label: t("projects.portfolio.view"), url: "http://localhost:5173" }],
+                  view: [{ label: t("projects.portfolio.view"), url: "https://vuthequan.vercel.app/" }],
                   link: [{ label: "GitHub", url: "https://github.com/thequanvu204/portfolio" }],
                 })
               }
