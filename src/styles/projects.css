@@ -1,17 +1,16 @@
 .projects {
-  max-width: none; /* ✔ co lại vừa màn hình nhỏ */
-  width: 100%;       /* ✔ responsive */
+  max-width: none;
+  width: 100%;
   margin: 0 auto;
   padding: 90px 15px;
-  min-height: 100vh; /* đảm bảo chiều cao tối thiểu */
+  min-height: 100vh;
   box-sizing: border-box; 
 }
 
-/* ===== TITLE ===== */
 .prj-title {
   position: relative;
   text-align: center;
-  margin-bottom: 1.5rem;   /* khoảng cách đồng bộ */
+  margin-bottom: 1.5rem;
   width: 100%;
   color: #E0F7FA;
 }
@@ -38,14 +37,13 @@
   pointer-events: none;
 }
 
-/* ===== CATEGORY FILTER ===== */
 .prj-categories {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
-  max-width: 1000px;   /* giới hạn chiều ngang */
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
@@ -61,8 +59,8 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  white-space: nowrap;   /* giữ text không bị cắt */
-  flex-shrink: 0;        /* không bị co lại khi nhiều nút */
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .cat-btn:hover {
@@ -73,7 +71,6 @@
   background: #1E88E5;
 }
 
-/* ===== GRID ===== */
 .prj-grid {
   display: grid;
   padding: 0 15%;
@@ -82,7 +79,6 @@
   justify-items: center;
 }
 
-/* ===== CARD ===== */
 .prj-card {
   background: #001D3D;
   border-radius: 10px;
@@ -138,7 +134,6 @@
   text-align: left;
 }
 
-/* ===== TAGS ===== */
 .prj-tags {
   display: flex;
   flex-wrap: wrap;
@@ -162,14 +157,13 @@
   background: #1565C0;
 }
 
-/* ===== MODAL OVERLAY ===== */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85); /* tối hơn một chút giống Education */
+  background: rgba(0,0,0,0.85);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,21 +171,19 @@
   animation: fadeIn 0.3s ease;
 }
 
-/* ===== MODAL POPUP ===== */
 .modal-popup {
   background: #001D3D;
   border-radius: 12px;
   display: flex;
   flex-direction: row;
-  width: 1300px;     /* tăng kích thước so với trước */
-  height: 500px;     /* tăng kích thước so với trước */
+  width: 1300px;
+  height: 500px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
   animation: fadeIn 0.3s ease;
 }
 
-/* ===== CLOSE BUTTON ===== */
 .modal-close {
   position: absolute;
   top: 10px;
@@ -209,7 +201,6 @@
   color: #f87171;
 }
 
-/* ===== LEFT ===== */
 .modal-left {
   flex: 1;
   display: flex;
@@ -224,10 +215,9 @@
   max-height: calc(100% - 40px);
   height: auto;
   aspect-ratio: 16 / 9;
-  object-fit: contain; /* giữ nguyên 16:9, không crop */
+  object-fit: contain;
 }
 
-/* ===== RIGHT ===== */
 .modal-right {
   flex: 1;
   padding: 20px;
@@ -266,7 +256,7 @@
 .modal-btn {
   padding: 0.5rem 1.2rem;
   border: 2px solid #1E88E5;
-  border-radius: 9999px; /* pill shape */
+  border-radius: 9999px;
   background: transparent;
   color: #1E88E5;
   font-size: 0.9rem;
@@ -276,11 +266,10 @@
 }
 
 .modal-btn:hover {
-  background: #1E88E5; /* chỉ hover viền và nền nhạt */
+  background: #1E88E5;
   color: white;
 }
 
-/* ===== ANIMATION ===== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -292,7 +281,6 @@
   }
 }
 
-/* ≤ 932px (điện thoại quay ngang) → 2 cột */
 @media (max-width: 932px) {
   .projects {
     padding-top: 90px;
@@ -304,14 +292,14 @@
   }
 
   .prj-card {
-    max-width: 400px; /* giới hạn chiều rộng card */
+    max-width: 400px;
   }
 
   .modal-popup {
-    flex-direction: column; /* đổi thành 1 cột */
-    width: 95%;             /* vừa màn hình */
-    height: auto;           /* co giãn theo nội dung */
-    max-height: 90vh;       /* không vượt quá chiều cao màn hình */
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    max-height: 90vh;
   }
 
   .modal-left {
@@ -319,14 +307,14 @@
     max-height: 50%;        
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* 👈 đẩy ảnh xuống từ trên */
-    padding-top: 60px;       /* 👈 khoảng cách an toàn */
+    align-items: flex-start;
+    padding-top: 60px;
   }
 
   .modal-left img {
     width: 100%;
     height: auto;
-    margin-top: 20px;        /* 👈 thêm margin cho ảnh */
+    margin-top: 20px;
     aspect-ratio: 16 / 9;
     object-fit: contain;
   }
@@ -338,7 +326,6 @@
   }
 }
 
-/* ≤ 480px (điện thoại quay dọc) → 1 cột */
 @media (max-width: 480px) {
   .projects {
     padding-top: 80px;
@@ -349,6 +336,6 @@
   }
 
   .prj-card {
-    max-width: 350px; /* giới hạn chiều rộng card */
+    max-width: 350px;
   }
 }

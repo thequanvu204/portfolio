@@ -8,7 +8,6 @@
   background: linear-gradient(to bottom, #010a14, #021024, #043354);
 }
 
-/* cụm chấm tĩnh */
 .static-dots {
   position: fixed;
   bottom: 30px;
@@ -26,7 +25,7 @@
 }
 
 .dot {
-  width: 6px;  /* dot tĩnh luôn lớn hơn dot rơi */
+  width: 6px;
   height: 6px;
   border-radius: 50%;
   animation: blinkStar 4s infinite ease-in-out;

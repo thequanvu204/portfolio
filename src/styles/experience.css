@@ -1,7 +1,6 @@
-/* ===== CONTAINER CHÍNH ===== */
 .experience {
   padding: 2rem;
-  padding-top: 90px;         /* giống AboutMe */
+  padding-top: 90px;
   box-sizing: border-box;
   color: #fff;
   display: flex;
@@ -9,11 +8,10 @@
   align-items: center;
 }
 
-/* ===== TITLE ===== */
 .exp-title {
   position: relative;
   text-align: center;
-  margin-bottom: 1.5rem;     /* giống AboutMe */
+  margin-bottom: 1.5rem;
   width: 100%;
   color: #E0F7FA;
 }
@@ -40,7 +38,6 @@
   pointer-events: none;
 }
 
-/* ===== TIMELINE WRAPPER (chỉ là container, không có line) ===== */
 .exp-timeline {
   position: relative;
   margin: 0 auto;
@@ -57,7 +54,6 @@
   width: 100%;
 }
 
-/* ===== CARD ===== */
 .exp-timeline-card {
   background: #001D3D;
   border-radius: 10px;
@@ -68,7 +64,6 @@
   transition: max-height 0.5s ease;
 }
 
-/* ===== CARD HEADER ===== */
 .exp-card-header {
   display: flex;
   align-items: center;
@@ -125,7 +120,6 @@
   transform: rotate(180deg);
 }
 
-/* ===== COLLAPSIBLE ===== */
 .collapsible {
   max-height: 0;
   overflow: hidden;
@@ -136,7 +130,6 @@
   max-height: 2000px;
 }
 
-/* ===== CARD DETAILS ===== */
 .exp-details {
   background: #001D3D;
   border-radius: 0 0 10px 10px;
@@ -156,7 +149,6 @@
   max-height: 600px;
 }
 
-/* ===== DETAIL SECTION ===== */
 .exp-section h4 {
   font-size: 1rem;
   font-weight: 600;
@@ -184,7 +176,6 @@
   margin-bottom: 0.4rem;
 }
 
-/* ===== ANIMATION ===== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -196,18 +187,15 @@
   }
 }
 
-/* ===== RESPONSIVE ===== */
-/* Responsive cho title */
 @media (max-width: 932px) {
   .exp-title h3,
   .exp-title-bg {
-    white-space: normal;     /* Cho phép xuống dòng theo khoảng trắng */
-    word-break: keep-all;    /* Không cắt giữa từ */
-    text-align: center;      /* Căn giữa */
+    white-space: normal;
+    word-break: keep-all;
+    text-align: center;
   }
 }
 
-/* Responsive cho mobile 480px */
 @media (max-width: 480px) {
   .exp-title h3 {
     font-size: 1.5rem;
@@ -224,16 +212,16 @@
 
   .exp-time {
     margin-left: 0;
-    width: 100%;           /* ép xuống dòng mới */
+    width: 100%;
   }
 
   .exp-timeline-card.expanded .exp-details {
-    max-height: none;    /* mở full */
-    overflow: visible;   /* cho hiện hết */
+    max-height: none;
+    overflow: visible;
     padding: 1.2rem 1.8rem; 
   }
 
   .collapsible.open {
-    max-height: none;    /* bỏ giới hạn khi mở */
+    max-height: none;
   }
 }

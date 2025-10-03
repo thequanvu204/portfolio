@@ -32,14 +32,14 @@ const Home = () => {
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("thequanvu204@gmail.com").then(() => {
       setCopyMsg("Email copied!");
-      setTimeout(() => setCopyMsg(""), 2000); // 2s sau ẩn thông báo
+      setTimeout(() => setCopyMsg(""), 2000);
     });
   };
 
   const handleDownloadCV = (): void => {
     const link = document.createElement("a");
     link.href = "/Lebenslauf_TheQuanVu.pdf"; 
-    link.download = "Lebenslauf_TheQuanVu.pdf"; // Tên file khi tải về
+    link.download = "Lebenslauf_TheQuanVu.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -47,27 +47,21 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* Hero background cố định cho mobile */}
       <div className="hero"></div>
 
       <div className="introduction">
         <div className="text">
-          {/* Intro1 - câu chào */}
           <p className="intro-greeting">{t("home.intro1")}</p>
 
-          {/* Intro2 - tên */}
           <h1 className="typing intro-name">
             {displayedText}
             <span className="cursor"></span>
           </h1>
 
-          {/* Intro3 - vị trí hiện tại */}
           <p className="intro-position">{t("home.intro3")}</p>
 
-          {/* Intro4 - đoạn giới thiệu */}
           <p className="intro-summary">{t("home.intro4")}</p>
 
-          {/* Social buttons */}
           <div className="social-btns">
             <button className="social-btn" onClick={handleCopyEmail}>
               <FaEnvelope size={19} />
@@ -80,17 +74,14 @@ const Home = () => {
             </a>
           </div>
 
-          {/* Copy email toast */}
           {copyMsg && <div className="copy-toast">{copyMsg}</div>}
 
-          {/* CV button */}
           <button onClick={handleDownloadCV} className="cv-btn">
             <FiDownload className="cv-icon" />
             <span>{t("home.downloadCV")}</span>
           </button>
         </div>
 
-        {/* NAV BTN */}
         <div className="nav-btn">
           <Link to="/about-me"><button>{t("home.aboutBtn")}</button></Link>
           <Link to="/education"><button>{t("home.educationBtn")}</button></Link>

@@ -1,15 +1,13 @@
 .app-container {
-  min-height: 100vh;     /* toàn trang cao bằng viewport */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Nội dung chiếm hết phần còn lại để đẩy footer xuống */
 .app-main {
   flex: 1;
 }
 
-/* Footer luôn ở đáy và canh giữa */
 .footer {
   text-align: center;
   padding: 0.5rem 0;

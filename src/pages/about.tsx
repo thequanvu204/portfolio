@@ -2,7 +2,6 @@ import "../styles/about.css";
 import NavBar from "../components/navbar.tsx";
 import { useLanguage } from "../i18n/LanguageContext";
 
-// logos
 import Python from "../assets/logo/python.svg";
 import Scala from "../assets/logo/scala.svg";
 import TypeScript from "../assets/logo/typescript.svg";
@@ -18,7 +17,7 @@ import Excel from "../assets/logo/excel.png";
 import PowerPoint from "../assets/logo/powerpoint.png";
 
 const AboutMe = () => {
-  const { t } = useLanguage();   // 👈 lấy hàm dịch
+  const { t } = useLanguage();
 
   return (
     <>

@@ -1,16 +1,14 @@
-/* ===== CONTAINER CHÍNH ===== */
 .education {         
   padding: 2rem;
-  padding-top: 90px;         /* giống AboutMe */
+  padding-top: 90px;
   box-sizing: border-box;
   color: #fff;
 }
 
-/* ===== TITLE ===== */
 .edu-title {
   position: relative;
   text-align: center;
-  margin-bottom: 1.5rem;     /* giống AboutMe */
+  margin-bottom: 1.5rem;
   width: 100%;
   color: #E0F7FA;
 }
@@ -37,7 +35,6 @@
   pointer-events: none;
 }
 
-/* ===== TIMELINE ===== */
 .edu-timeline {
   position: relative;
   margin: 0 auto;
@@ -64,7 +61,6 @@
   position: relative;
 }
 
-/* ===== ICON ===== */
 .edu-timeline-icon {
   position: absolute;
   top: 30px;
@@ -81,7 +77,6 @@
   z-index: 1;
 }
 
-/* ===== CARD ===== */
 .edu-timeline-card {
   background: #001D3D;
   border-radius: 10px;
@@ -93,7 +88,6 @@
   transition: max-height 0.5s ease;
 }
 
-/* ===== CARD HEADER ===== */
 .edu-card-header {
   display: flex;
   align-items: center;
@@ -150,7 +144,6 @@
   transform: rotate(180deg);
 }
 
-/* ===== COLLAPSIBLE ===== */
 .collapsible {
   max-height: 0;
   overflow: hidden;
@@ -161,7 +154,6 @@
   max-height: 2000px;
 }
 
-/* ===== UNI DETAILS ===== */
 .uni-details {
   background: #001D3D;
   border-radius: 0 0 10px 10px;
@@ -209,7 +201,6 @@
   margin-bottom: 0.4rem;
 }
 
-/* ===== UNI MODULES ===== */
 .uni-modules {
   overflow-x: auto;
   padding-bottom: 0.5rem;
@@ -262,7 +253,6 @@
   flex-shrink: 0;
 }
 
-/* ===== STK DETAILS ===== */
 .stk-details {
   background: #001D3D;
   border-radius: 0 0 10px 10px;
@@ -302,7 +292,6 @@
   justify-content: flex-start;
 }
 
-/* ===== THPT DETAILS ===== */
 .thpt-details {
   background: #001D3D;
   border-radius: 0 0 10px 10px;
@@ -329,7 +318,6 @@
   justify-content: flex-start;
 }
 
-/* ===== PDF BUTTON ===== */
 .pdf-btn {
   background: #1E88E5;
   color: #fff;
@@ -346,7 +334,6 @@
   background: #1565C0;
 }
 
-/* ===== PDF MODAL ===== */
 .pdf-modal {
   position: fixed;
   top: 0;
@@ -361,7 +348,6 @@
   animation: fadeIn 0.3s ease;
 }
 
-/* ===== PDF CONTENT ===== */
 .pdf-content {
   background: #001D3D;
   border-radius: 10px;
@@ -386,7 +372,6 @@
   background: #1e293b;
 }
 
-/* ===== CLOSE BUTTON ===== */
 .close-btn {
   position: absolute;
   top: 8px;
@@ -405,7 +390,6 @@
   color: #f87171;
 }
 
-/* ===== ANIMATION ===== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -417,17 +401,15 @@
   }
 }
 
-/* Responsive cho title */
 @media (max-width: 932px) {
   .edu-title h3,
   .edu-title-bg {
-    white-space: normal;     /* Cho phép xuống dòng theo khoảng trắng */
-    word-break: keep-all;    /* Không cho cắt giữa từ */
-    text-align: center;      /* Giữ căn giữa */
+    white-space: normal;
+    word-break: keep-all;
+    text-align: center;
   }
 }
 
-/* Responsive cho title xuống đúng từ */
 @media (max-width: 480px) {
   .edu-title h3 {
     font-size: 1.5rem;
@@ -438,15 +420,15 @@
   }
 
   .edu-timeline::before {
-    left: 30px;        /* dịch line sát trái hơn */
+    left: 30px;
   }
 
   .edu-timeline-icon {
-    left: 12px;        /* icon đi theo line */
+    left: 12px;
   }
 
   .edu-timeline-card {
-    margin-left: 55px; /* dịch card gần trái hơn */
+    margin-left: 55px;
   }
 
   .edu-card-header {
@@ -456,7 +438,7 @@
 
   .edu-time {
     margin-left: 0;
-    width: 100%;           /* ép xuống dòng mới */
+    width: 100%;
   }
 
   .uni-details-top {
@@ -465,13 +447,13 @@
   }
 
   .thpt-footer {
-    flex-direction: column;   /* Xếp dọc */
-    align-items: stretch;     /* Nút giãn full width nếu muốn */
-    gap: 0.6rem;              /* Khoảng cách giữa các nút */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
   }
 
   .thpt-footer .pdf-btn {
-    width: 100%;              /* Cho nút full chiều ngang card */
+    width: 100%;
     text-align: center;
   }
 }

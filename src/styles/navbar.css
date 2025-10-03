@@ -1,4 +1,3 @@
-/* ===== DESKTOP NAVBAR ===== */
 .navigator {
   position: fixed;
   top: 0;
@@ -23,7 +22,7 @@
   color: white;
   font-weight: 500;
   border-radius: 9999px;
-  width: 40px; /* hình tròn mặc định */
+  width: 40px;
   height: 40px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -35,13 +34,11 @@
   transition: opacity 0.25s ease-in-out;
 }
 
-/* Icon hiển thị mặc định */
 .nav-icon {
   opacity: 1;
   font-size: 18px;
 }
 
-/* Text ẩn mặc định */
 .nav-text {
   opacity: 0;
   font-size: 16px;
@@ -49,7 +46,6 @@
   white-space: nowrap;
 }
 
-/* Hover desktop: mở rộng thành viên thuốc + hiện text */
 .nav-link:hover {
   width: 200px;
   background-color: white;
@@ -65,14 +61,12 @@
   position: static;
 }
 
-/* Active link */
 .nav-link.active {
   font-weight: 700;
   background-color: #0e3d66;
   color: white;
 }
 
-/* ===== HAMBURGER ===== */
 .hamburger {
   display: none;
   position: fixed;
@@ -91,10 +85,9 @@
 
 .hamburger.open {
   padding-left: 9px;
-  color: #1e88e5; /* khi mở đổi màu đỏ cho rõ ràng */
+  color: #1e88e5;
 }
 
-/* ===== MOBILE DROPDOWN MENU ===== */
 .mobile-dropdown {
   position: fixed;
   top: 60px;
@@ -107,11 +100,11 @@
   max-height: 0;
   opacity: 0;
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  pointer-events: none; /* khi đóng không cho click */
+  pointer-events: none;
 }
 
 .mobile-dropdown.open {
-  max-height: 500px; /* đủ lớn để chứa 5 nút */
+  max-height: 500px;
   opacity: 1;
   pointer-events: auto;
 }
@@ -145,12 +138,11 @@
   background-color: #0e3d66;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 932px) {
   .navigator {
-    display: none; /* ẩn navbar desktop */
+    display: none;
   }
   .hamburger {
-    display: block; /* hiện hamburger */
+    display: block;
   }
 }

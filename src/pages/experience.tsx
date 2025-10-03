@@ -26,7 +26,6 @@ const Experience = () => {
         <div className="exp-timeline">
           <div className="exp-timeline-item">
             <div className={`exp-timeline-card ${expandedCard === "conscia" ? "expanded" : ""}`}>
-              {/* Header */}
               <div className="exp-card-header clickable" onClick={() => toggleCard("conscia")}>
                 <img src={Conscia} className="exp-logo" />
                 <div className="exp-content">

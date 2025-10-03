@@ -16,11 +16,11 @@
 }
 
 .lang-btn:focus {
-  outline: none;        /* bỏ viền mặc định */
+  outline: none;
 }
 
 .lang-btn:focus-visible {
-  outline: none;        /* bỏ luôn outline khi tab bằng bàn phím */
+  outline: none;
 }
 
 .lang-menu {

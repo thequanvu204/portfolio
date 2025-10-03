@@ -4,7 +4,6 @@ import "../styles/education.css";
 import NavBar from "../components/navbar.tsx";
 import { useLanguage } from "../i18n/LanguageContext";
 
-// logo
 import JGU from "../assets/logo/uni-mainz.png";
 import STK from "../assets/logo/uni-marburg.jpg";
 import THPT from "../assets/logo/thpt-cnn.png";
@@ -30,7 +29,7 @@ const Education = () => {
         </div>
 
         <div className="edu-timeline">
-          {/* University - Bachelor */}
+          {/* Uni */}
           <div className="edu-timeline-item">
             <div className="edu-timeline-icon">
               <FaBookOpen className="studying-icon" />
@@ -50,8 +49,7 @@ const Education = () => {
                   />
                 </div>
               </div>
-
-              {/* Expanded details */}
+              
               <div
                 className={`collapsible ${expandedCard === "jgu" ? "open" : ""}`}
               >
@@ -75,7 +73,7 @@ const Education = () => {
                   </div>
 
                   <h4 className="uni-modules-title">{t("education.jgu.modules")}</h4>
-                  {/* Horizontal scrollable modules */}
+                  
                   <div className="uni-modules">
                     <div className="uni-modules-wrapper">
                       <div className="uni-module">
@@ -187,7 +185,6 @@ const Education = () => {
               <FaGraduationCap className="studying-icon" />
             </div>
             <div className={`edu-timeline-card ${expandedCard === "stk" ? "expanded" : ""}`}>
-              {/* Header */}
               <div className="edu-card-header clickable" onClick={() => toggleCard("stk")}>
                 <img src={STK} className="edu-logo" />
                 <div className="edu-content">
@@ -238,7 +235,6 @@ const Education = () => {
               <FaGraduationCap className="studying-icon" />
             </div>
             <div className={`edu-timeline-card ${expandedCard === "thpt" ? "expanded" : ""}`}>
-              {/* Header */}
               <div className="edu-card-header clickable" onClick={() => toggleCard("thpt")}>
                 <img src={THPT} className="edu-logo" />
                 <div className="edu-content">
