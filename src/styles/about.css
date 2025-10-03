@@ -1,6 +1,5 @@
 /* --- Toàn trang trong class about-me --- */
-.about-me {
-  min-height: 100vh;          /* nền đen toàn trang */
+.about-me {         /* nền đen toàn trang */
   padding: 2rem;
   box-sizing: border-box;
   color: white;               /* chữ mặc định: đen (vì box trắng) */
@@ -53,6 +52,7 @@
   flex-direction: column;
   gap: 1.2rem;               /* giảm gap giữa Personal Info và Languages */
   padding-top: 20px;
+  flex: 1;                  /* để cột trái co giãn */
 }
 
 /* Skill box chiếm trọn chiều cao bên phải */

@@ -1,6 +1,5 @@
 /* ===== CONTAINER CHÍNH ===== */
-.education {
-  min-height: 100vh;          
+.education {         
   padding: 2rem;
   padding-top: 90px;         /* giống AboutMe */
   box-sizing: border-box;
