@@ -305,7 +305,7 @@ const translations: Translations = {
       chess: {
         name: "Chess Game",
         time: "Mar 2023",
-        desc: "This is a simple chess game application developed as part of Introduction to Programming course .",
+        desc: "This is a simple chess game application developed as part of Introduction to Programming course. Explore more about source code on GitHub below.",
         memNum: "Team members: 3",
         role: "Role: Developer",
         tech: "Tech Stack: Python, PyQt5",
@@ -469,7 +469,7 @@ const translations: Translations = {
       chess: {
         name: "Trò chơi cờ vua",
         time: "03/2023",
-        desc: "Đây là một ứng dụng trò chơi cờ vua đơn giản được phát triển trong khuôn khổ môn Nhập môn Lập trình.",
+        desc: "Đây là một ứng dụng trò chơi cờ vua đơn giản được phát triển trong khuôn khổ môn Nhập môn Lập trình. Tìm hiểu thêm về mã nguồn trên GitHub bên dưới.",
         memNum: "Số thành viên nhóm: 3",
         role: "Vai trò: Lập trình viên",
         tech: "Công nghệ sử dụng: Python, PyQt5", 
@@ -633,7 +633,7 @@ const translations: Translations = {
       chess: {
         name: "Schachspiel",
         time: "Mär 2023",
-        desc: "Dies ist eine einfache Schachspiel-Anwendung, die im Rahmen des Kurses Einführung in die Programmierung entwickelt wurde.",
+        desc: "Dies ist eine einfache Schachspiel-Anwendung, die im Rahmen des Kurses Einführung in die Programmierung entwickelt wurde. Erfahre mehr über den Quellcode auf GitHub unten.",
         memNum: "Teammitglieder: 3",
         role: "Rolle: Entwickler",
         tech: "Technologie-Stack: Python, PyQt5",
