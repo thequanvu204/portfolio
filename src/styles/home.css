@@ -21,14 +21,14 @@
   height: 100vh; 
   background-image: url("../assets/background/profile.png"); 
   background-repeat: no-repeat; 
-  background-position: left 7.5% bottom; 
-  background-size: 900px auto; 
+  background-position: left 5% bottom; 
+  background-size: 50% auto; 
 } 
   
 .text { 
   width: 100%; 
   max-width: 645px; 
-  padding-right: 100px; 
+  padding-right: 50px; 
   text-align: left; 
   justify-content: left; 
 }
@@ -185,7 +185,7 @@
   flex-direction: row; 
   gap: 15px; 
   flex-wrap: nowrap; 
-  padding-right: 100px; 
+  padding-right: 50px; 
   padding-top: 30px;
 } 
 
