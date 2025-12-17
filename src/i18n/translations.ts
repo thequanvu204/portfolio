@@ -305,7 +305,7 @@ const translations: Translations = {
       chess: {
         name: "Chess Game",
         time: "Mar 2023",
-        desc: "This is a simple chess game application developed as part of Introduction to Programming course. Explore more about source code on GitHub below.",
+        desc: "This project was carried out as part of Introduction to Programming module. Working in a team of three, we developed a simple chess game using Python, with PyQt for the graphical user interface (GUI). The main goal of the project was to gain hands-on experience in programming fundamentals, team-based software development, and basic software engineering concepts. Explore more about source code on GitHub below.",
         memNum: "Team members: 3",
         role: "Role: Developer",
         tech: "Tech Stack: Python, PyQt5",
@@ -469,7 +469,7 @@ const translations: Translations = {
       chess: {
         name: "Trò chơi cờ vua",
         time: "03/2023",
-        desc: "Đây là một ứng dụng trò chơi cờ vua đơn giản được phát triển trong khuôn khổ môn Nhập môn Lập trình. Tìm hiểu thêm về mã nguồn trên GitHub bên dưới.",
+        desc: "Đây là một dự án được thực hiện trong khuôn khổ môn Nhập môn Lập trình. Chúng tôi làm việc theo nhóm gồm 3 người và cùng nhau phát triển một trò chơi cờ vua đơn giản bằng Python, sử dụng PyQt để xây dựng giao diện đồ họa người dùng (GUI). Mục tiêu chính của dự án là giúp sinh viên làm quen với tư duy lập trình, làm việc nhóm và những khái niệm cơ bản trong phát triển phần mềm. Tìm hiểu thêm về mã nguồn trên GitHub bên dưới.",
         memNum: "Số thành viên nhóm: 3",
         role: "Vai trò: Lập trình viên",
         tech: "Công nghệ sử dụng: Python, PyQt5", 
@@ -633,7 +633,7 @@ const translations: Translations = {
       chess: {
         name: "Schachspiel",
         time: "Mär 2023",
-        desc: "Dies ist eine einfache Schachspiel-Anwendung, die im Rahmen des Kurses Einführung in die Programmierung entwickelt wurde. Erfahre mehr über den Quellcode auf GitHub unten.",
+        desc: "Dieses Projekt wurde im Rahmen des Moduls Einführung in die Programmierung durchgeführt. In einem Team von drei Personen entwickelten wir ein einfaches Schachspiel mit Python, wobei PyQt zur Umsetzung der grafischen Benutzeroberfläche (GUI) eingesetzt wurde. Ziel des Projekts war es, erste praktische Erfahrungen in der Programmierung, der Teamarbeit sowie in grundlegenden Konzepten der Softwareentwicklung zu sammeln. Erfahre mehr über den Quellcode auf GitHub unten.",
         memNum: "Teammitglieder: 3",
         role: "Rolle: Entwickler",
         tech: "Technologie-Stack: Python, PyQt5",
