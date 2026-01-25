@@ -12,6 +12,8 @@ import Github from "../assets/logo/github.svg";
 import Gitlab from "../assets/logo/gitlab.svg";
 import Latex from "../assets/logo/latex.svg";
 import Wireshark from "../assets/logo/wireshark.png";
+import Haskell from "../assets/logo/haskell.svg";
+import ProLog from "../assets/logo/prolog.svg";
 import Word from "../assets/logo/word.png";
 import Excel from "../assets/logo/excel.png";
 import PowerPoint from "../assets/logo/powerpoint.png";
@@ -82,6 +84,8 @@ const AboutMe = () => {
                 <img src={Gitlab} />
                 <img src={Latex} />
                 <img src={Wireshark} />
+                <img src={Haskell} />
+                <img src={ProLog} />
                 <img src={Word} />
                 <img src={Excel} />
                 <img src={PowerPoint} />
