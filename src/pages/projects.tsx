@@ -7,6 +7,7 @@ import Portfolio from "../assets/portfolio.png";
 import ChessGame from "../assets/chess.png";
 import AIWeb from "../assets/aiweb.jpeg";
 import Webserver from "../assets/webserver.png";
+import Compiler from "../assets/compiler.png";
 
 type Project = {
   name: string;
@@ -227,6 +228,45 @@ const Projects = () => {
                   <span className="tag">Wireshark</span>
                   <span className="tag">HTML</span>
                   <span className="tag">LaTeX</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Compiler Project */}
+          {matchCategory({
+            name: t("projects.compiler.name"),
+            time: t("projects.compiler.time"),
+            desc: t("projects.compiler.desc"),
+            img: Compiler,
+            tags: ["Haskell"],
+            category: ["cat4"],
+          }) && (
+            <div
+              className="prj-card"
+              onClick={() =>
+                handleOpen({
+                  name: t("projects.compiler.name"),
+                  time: t("projects.compiler.time"),
+                  desc: t("projects.compiler.desc"),
+                  memNum: t("projects.compiler.memNum"),
+                  role: t("projects.compiler.role"),
+                  tech: t("projects.compiler.tech"),
+                  img: Compiler,
+                  tags: ["Haskell"],
+                  category: ["cat4"],
+                  link: [{ label: "GitHub", url: "https://github.com/thequanvu204/compiler-construction" }],
+                })
+              }
+            >
+              <div className="prj-img">
+                <img src={Compiler} alt="Compiler" />
+              </div>
+              <div className="prj-info">
+                <h3 className="prj-name">{t("projects.compiler.name")}</h3>
+                <p className="prj-time">{t("projects.compiler.time")}</p>
+                <div className="prj-tags">
+                  <span className="tag">Haskell</span>
                 </div>
               </div>
             </div>

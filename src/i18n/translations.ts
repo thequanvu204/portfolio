@@ -154,6 +154,14 @@ type Translation = {
       role?: string;
       tech?: string; 
     };
+    compiler: {
+      name: string;
+      time: string;
+      desc?: string;
+      memNum?: string;
+      role?: string;
+      tech?: string;
+    };
   };
 };
 
@@ -326,6 +334,14 @@ const translations: Translations = {
         role: "Role: Frontend Developer",
         tech: "Tech Stack: React, TypeScript, CSS, ChakraUI",
       },
+      compiler: {
+        name: "Compiler Construction",
+        time: "Apr 2026",
+        desc: "This is a simple compiler for a small programming language called 'MicroC', developed as part of Compiler Construction course. We worked in a team of 3 members to implement the lexer, parser, typechecker, lambdalifter, code generator and virtual machine using Haskell. The project aimed to provide practical experience in compiler design and implementation, as well as to deepen our understanding of programming language concepts. Explore more about source code on GitHub below.",
+        memNum: "Team members: 3",
+        role: "Role: Developer",
+        tech: "Tech Stack: Haskell",
+      },
     },
   },
   vi: {
@@ -385,7 +401,7 @@ const translations: Translations = {
         minorName: "Kinh tế học",
         project1: "Trò chơi (Nhập môn Lập trình)",
         project2: "Kỹ thuật phần mềm (Phương pháp Agile)",
-        project3: "Webserver và Phân tích mạng (Mạng truyền thông)",
+        project3: "Webserver và Phân tích mạng (Mạng máy tính)",
         moduleNames: {
           introProg: "Nhập môn Lập trình",
           digitalCircuits: "Mạch và Hệ thống Số",
@@ -490,6 +506,14 @@ const translations: Translations = {
         role: "Vai trò: Lập trình viên frontend",
         tech: "Công nghệ sử dụng: React, TypeScript, CSS, ChakraUI",
       },
+      compiler: {
+        name: "Xây dựng trình biên dịch",
+        time: "04/2026",
+        desc: "Đây là một trình biên dịch đơn giản cho một ngôn ngữ lập trình nhỏ có tên 'MicroC', được phát triển trong khuôn khổ môn Xây dựng ngôn ngữ và trình biên dịch. Chúng tôi đã làm việc theo nhóm gồm 3 thành viên để triển khai lexer, parser, typechecker, lambdalifter, code generator và máy ảo sử dụng Haskell. Dự án nhằm cung cấp kinh nghiệm thực tế trong thiết kế và triển khai trình biên dịch, cũng như để hiểu sâu hơn về các khái niệm ngôn ngữ lập trình. Tìm hiểu thêm về mã nguồn trên GitHub bên dưới.",
+        memNum: "Số thành viên nhóm: 3",
+        role: "Vai trò: Lập trình viên",
+        tech: "Công nghệ sử dụng: Haskell",
+      },
     },
   },
   de: {
@@ -580,7 +604,7 @@ const translations: Translations = {
       stk: {
         name: "Studienkolleg Mittelhessen",
         degree: "Studienvorbereitung",
-        time: "Sep 2021 - Jul 2022",
+        time: "Sept. 2021 - Jul. 2022",
         focus: "T-Kurs",
         focusContent: "Technische, mathematische und naturwissenschaftliche Studiengänge",
         subjects: "Fächer",
@@ -594,7 +618,7 @@ const translations: Translations = {
       thpt: {
         name: "Spezialisiertes Gymnasium für Fremdsprachen",
         degree: "Spezialklasse für Deutsch (7-jährige Ausbildung)",
-        time: "Sep 2018 - Jul 2021",
+        time: "Sept. 2018 - Jul. 2021",
         dsd: "DSD-II Zertifikat",
         exam: "Hochschulaufnahmeprüfung",
         transcript: "Oberschule Notenübersicht",
@@ -605,7 +629,7 @@ const translations: Translations = {
       conscia: {
         name: "Conscia Deutschland GmbH",
         position: "Werkstudent IT - Service Techniker",
-        time: "Jul 2025 bisher",
+        time: "Jul. 2025 bisher",
         companyDesc: "Die Conscia Deutschland GmbH ist ein IT-Beratungsunternehmen und Teil der internationalen Conscia Group, die auf IT-Infrastruktur, Cybersicherheit und Cloud-Management spezialisiert ist. Das Unternehmen hat ein Projekt zur Bereitstellung von multimedialen Entertainmentsdiensten für Patienten am Universitätsklinikum Mainz umgesetzt. Mit der Lösung BEWATEC ConnectedCare übernimmt Conscia die Implementierung, den Betrieb und die Wartung des Entertainmentssystems am Patientenbett, das Dienste wie Filme, Musik, Internetzugang und Krankenhausinformationen bietet.",
         mainTasks: "Meine Hauptarbeit",
         taskContent: 
@@ -624,7 +648,7 @@ const translations: Translations = {
       cat4: "Softwaretechnik",
       portfolio: {
         name: "Portfolio Webseite",
-        time: "Sep 2025",
+        time: "Sept. 2025",
         desc: "Dies ist meine persönliche Portfolio-Webseite, um mich, meinen Werdegang und einige Projekte, an denen ich gearbeitet habe, vorzustellen. Erfahre mehr über die Webseite und den Quellcode auf GitHub unten.",
         role: "Rolle: Hauptentwickler",
         tech: "Technologie-Stack: React, TypeScript, CSS",
@@ -632,7 +656,7 @@ const translations: Translations = {
       },
       chess: {
         name: "Schachspiel",
-        time: "Mär 2023",
+        time: "Mär. 2023",
         desc: "Dieses Projekt wurde im Rahmen des Moduls Einführung in die Programmierung durchgeführt. In einem Team von drei Personen entwickelten wir ein einfaches Schachspiel mit Python, wobei PyQt zur Umsetzung der grafischen Benutzeroberfläche (GUI) eingesetzt wurde. Ziel des Projekts war es, erste praktische Erfahrungen in der Programmierung, der Teamarbeit sowie in grundlegenden Konzepten der Softwareentwicklung zu sammeln. Erfahre mehr über den Quellcode auf GitHub unten.",
         memNum: "Teammitglieder: 3",
         role: "Rolle: Entwickler",
@@ -640,7 +664,7 @@ const translations: Translations = {
       },
       webserver: {
         name: "Webserver und Netzwerkanalyse",
-        time: "Aug 2025",
+        time: "Aug. 2025",
         desc: "Dies ist ein Netzwerk-Analyse-Labor und ein einfacher Webserver, der im Rahmen des Kurses Kommunikationsnetze entwickelt wurde. Wir arbeiteten in einem 2-köpfigen Team, um Netzwerkverkehrsdaten zu analysieren, die von Wireshark erfasst wurden, und implementierten einen einfachen Webserver, der HTTP-Anfragen und -Antworten verarbeiten kann. Erfahre mehr über dieses Labor auf Drive unten.",
         memNum: "Teammitglieder: 2",
         role: "Rolle: Entwickler",
@@ -653,6 +677,14 @@ const translations: Translations = {
         memNum: "Teammitglieder: 6",
         role: "Rolle: Frontend-Entwickler",
         tech: "Technologie-Stack: React, TypeScript, CSS, ChakraUI",
+      },
+      compiler: {
+        name: "Compiler Construction",
+        time: "Apr. 2026",
+        desc: "Dies ist ein einfacher Compiler für eine kleine Programmiersprache namens 'MicroC', der im Rahmen des Kurses Compiler Construction entwickelt wurde. Wir arbeiteten in einem Team von 3 Mitgliedern, um den Lexer, Parser, Typechecker, Lambdalifter, Code Generator und die virtuelle Maschine mit Haskell zu implementieren. Das Projekt zielte darauf ab, praktische Erfahrungen im Design und der Implementierung von Compilern zu sammeln sowie unser Verständnis von Konzepten der Programmiersprachen zu vertiefen. Erfahre mehr über den Quellcode auf GitHub unten.",
+        memNum: "Teammitglieder: 3",
+        role: "Rolle: Entwickler",
+        tech: "Technologie-Stack: Haskell",
       },
     },
   },
