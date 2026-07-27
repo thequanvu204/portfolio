@@ -40,6 +40,11 @@ type Translation = {
   };
   education: {
     title: string;
+    tud: {
+      name: string;
+      degree: string;
+      time: string;
+    };
     jgu: {
       name: string;
       degree: string;
@@ -54,6 +59,9 @@ type Translation = {
       project1: string;
       project2: string;
       project3: string;
+      project4: string;
+      bachelorThesis: string;
+      bachelorThesisLink: string;
       moduleNames: {
         introProg: string;
         digitalCircuits: string;
@@ -71,6 +79,8 @@ type Translation = {
         irw: string;
         erw: string;
         finanz: string;
+        computationalLogic: string;
+        compilerConstruction: string;
       };
       times: {
         wise2223: string;
@@ -79,6 +89,7 @@ type Translation = {
         sose24: string;
         wise2425: string;
         sose25: string;
+        wise2526: string;
       };
     };
     stk: {
@@ -162,6 +173,14 @@ type Translation = {
       role?: string;
       tech?: string;
     };
+    vata: {
+      name: string;
+      time: string;
+      desc?: string;
+      memNum?: string;
+      role?: string;
+      tech?: string;
+    };
   };
 };
 
@@ -186,7 +205,7 @@ const translations: Translations = {
       intro3:
         "Computer Science student",
       intro4:
-        "Welcome to my portfolio website! I'm Quan, 22 years old. I come from Vietnam and currently studying Computer Science at Johannes Gutenberg University of Mainz. Feel free to explore more about me, my education journey, work experiences and projects below. And don't hesistate to leave a message. I'm looking forward to connecting with you.",
+        "Welcome to my portfolio website! I'm Quan, 23 years old. I come from Vietnam and currently studying Computer Science at Johannes Gutenberg University of Mainz. Feel free to explore more about me, my education journey, work experiences and projects below. And don't hesistate to leave a message. I'm looking forward to connecting with you.",
       downloadCV: "Download CV",
       aboutBtn: "About me",
       educationBtn: "Education",
@@ -216,6 +235,11 @@ const translations: Translations = {
     },
     education: {
       title: "EDUCATION JOURNEY",
+      tud: {
+        name: "Technical University of Darmstadt",
+        degree: "Master of Science - IT Security",
+        time: "from Oct 2026",
+      },
       jgu: {
         name: "Johannes Gutenberg University of Mainz",
         degree: "Bachelor of Science - Computer Science",
@@ -230,6 +254,9 @@ const translations: Translations = {
         project1: "Game (Introduction to Programming)",
         project2: "Software Engineering (Agile Methods)",
         project3: "Webserver and Network Analytics (Communication Networks)",
+        project4: "Compiler Construction",
+        bachelorThesis: "Bachelor's Thesis",
+        bachelorThesisLink: "Videotagging support software for the German Athletics Association (ODP)",
         moduleNames: {
           introProg: "Introduction to Programming",
           digitalCircuits: "Digital Circuits and Systems",
@@ -247,6 +274,8 @@ const translations: Translations = {
           irw: "Internal Accounting",
           erw: "External Accounting",
           finanz: "Financial Management",
+          computationalLogic: "Computational Logic",
+          compilerConstruction: "Compiler Construction",
         },
         times: {
           wise2223: "WiSe 2022/23",
@@ -255,6 +284,7 @@ const translations: Translations = {
           sose24: "SuSe 2024",
           wise2425: "WiSe 2024/25",
           sose25: "SuSe 2025",
+          wise2526: "WiSe 2025/26",
         },
       },
       stk: {
@@ -298,8 +328,8 @@ const translations: Translations = {
     projects: {
       title: "PROJECTS",
       all: "All",
-      cat1: "Web Development",
-      cat2: "Game Development",
+      cat1: "Web Application",
+      cat2: "Desktop Application",
       cat3: "Network",
       cat4: "Software Engineering",
       portfolio: {
@@ -313,7 +343,7 @@ const translations: Translations = {
       chess: {
         name: "Chess Game",
         time: "Mar 2023",
-        desc: "This project was carried out as part of Introduction to Programming module. Working in a team of three, we developed a simple chess game using Python, with PyQt for the graphical user interface (GUI). The main goal of the project was to gain hands-on experience in programming fundamentals, team-based software development, and basic software engineering concepts. Explore more about source code on GitHub below.",
+        desc: "This project was carried out as part of Introduction to Programming module. Working in a team of three, we developed a simple chess game using Python, with PyQt for the graphical user interface (GUI). The main goal of the project was to gain hands-on experience in programming fundamentals, team-based software development, and basic software engineering concepts.\n\nExplore more about source code on GitHub below.",
         memNum: "Team members: 3",
         role: "Role: Developer",
         tech: "Tech Stack: Python, PyQt5",
@@ -321,7 +351,7 @@ const translations: Translations = {
       webserver: {
         name: "Webserver and Network Analytics",
         time: "Aug 2025",
-        desc: "This is a Network Analytics Lab and a simple Webserver developed as part of Communication Networks course. We worked in a 2-member team to analyze network traffic data captured by Wireshark and implement a simple webserver that can handle HTTP requests and responses. Explore more about this lab on Drive below.",
+        desc: "This is a Network Analytics Lab and a simple Webserver developed as part of Communication Networks course. We worked in a 2-member team to analyze network traffic data captured by Wireshark and implement a simple webserver that can handle HTTP requests and responses.\n\nExplore more about this lab on Drive below.",
         memNum: "Team members: 2",
         role: "Role: Developer",
         tech: "Tech Stack: Python, Wireshark, LaTeX",
@@ -329,7 +359,7 @@ const translations: Translations = {
       aiSim: {
         name: "Active Learning Simulation UI",
         time: "Mar 2025",
-        desc: "This is an Active Learning Simulation Web Application developed as part of Software Engineering course. We worked in a 6-member frontend team, collaborating closely with a backend team, following Agile methodolgy with Kanban board for tasks tracking and weekly sprints. Explore more about source code on GitHub below.",
+        desc: "This is an Active Learning Simulation Web Application developed as part of Software Engineering course. We worked in a 6-member frontend team, collaborating closely with a backend team, following Agile methodolgy with Kanban board for tasks tracking and weekly sprints.\n\nExplore more about source code on GitHub below.",
         memNum: "Team members: 6",
         role: "Role: Frontend Developer",
         tech: "Tech Stack: React, TypeScript, CSS, ChakraUI",
@@ -337,10 +367,18 @@ const translations: Translations = {
       compiler: {
         name: "Compiler Construction",
         time: "Apr 2026",
-        desc: "This is a simple compiler for a small programming language called 'MicroC', developed as part of Compiler Construction course. We worked in a team of 3 members to implement the lexer, parser, typechecker, lambdalifter, code generator and virtual machine using Haskell. The project aimed to provide practical experience in compiler design and implementation, as well as to deepen our understanding of programming language concepts. Explore more about source code on GitHub below.",
+        desc: "This is a simple compiler for a small programming language called 'MicroC', developed as part of Compiler Construction course. We worked in a team of 3 members to implement the lexer, parser, typechecker, lambdalifter, code generator and virtual machine using Haskell. The project aimed to provide practical experience in compiler design and implementation, as well as to deepen our understanding of programming language concepts.\n\nExplore more about source code on GitHub below.",
         memNum: "Team members: 3",
         role: "Role: Developer",
         tech: "Tech Stack: Haskell",
+      },
+      vata: {
+        name: "VATA - Video-based Athletics Timing Analyzer",
+        time: "May 2026 - Jul 2026",
+        desc: "This Windows desktop application was developed as part of a bachelor’s thesis project. The software supports video-based analysis of athletes’ running times in sprint and hurdle events without the use of artificial intelligence. The application provides a video player with frame-by-frame navigation, an integrated data table based on templates developed according to the client’s requirements, and data import and export functions that follow the corresponding client-specific formats.\n\nFurther information about the source code and a trial version of the software can be found in the GitHub repository linked below.\n\nNotice: The release version and source code are provided exclusively for testing purposes and for evaluation during recruitment and selection processes. Please read the licence terms included in the GitHub repository carefully before using the software.",
+        memNum: "Team members: 1",
+        role: "Role: Developer",
+        tech: "Tech Stack: Python, PySide6",
       },
     },
   },
@@ -358,7 +396,7 @@ const translations: Translations = {
       intro3:
         "Sinh viên Công nghệ Thông tin",
       intro4:
-        "Chào mừng bạn đến với trang web portfolio của tôi! Tôi là Quân, 22 tuổi. Tôi đến từ Việt Nam và hiện đang là sinh viên ngành Công nghệ thông tin tại Đại học Johannes Gutenberg Mainz. Tìm hiểu thêm về tôi, hành trình học tập, kinh nghiệm làm việc và các dự án bên dưới. Đừng ngần ngại để lại tin nhắn. Tôi rất mong được kết nối với bạn.",
+        "Chào mừng bạn đến với trang web portfolio của tôi! Tôi là Quân, 23 tuổi. Tôi đến từ Việt Nam và hiện đang là sinh viên ngành Công nghệ thông tin tại Đại học Johannes Gutenberg Mainz. Tìm hiểu thêm về tôi, hành trình học tập, kinh nghiệm làm việc và các dự án bên dưới. Đừng ngần ngại để lại tin nhắn. Tôi rất mong được kết nối với bạn.",
       downloadCV: "Tải CV",
       aboutBtn: "Giới thiệu",
       educationBtn: "Học vấn",
@@ -388,6 +426,11 @@ const translations: Translations = {
     },
     education: {
       title: "QUÁ TRÌNH HỌC VẤN",
+      tud: {
+        name: "Đại học Kỹ thuật Darmstadt",
+        degree: "Cử nhân khoa học - An toàn thông tin",
+        time: "từ 10/2026",
+      },
       jgu: {
         name: "Đại học Johannes Gutenberg Mainz",
         degree: "Cử nhân khoa học - Công nghệ thông tin",
@@ -402,6 +445,9 @@ const translations: Translations = {
         project1: "Trò chơi (Nhập môn Lập trình)",
         project2: "Kỹ thuật phần mềm (Phương pháp Agile)",
         project3: "Webserver và Phân tích mạng (Mạng máy tính)",
+        project4: "Xây dựng trình biên dịch",
+        bachelorThesis: "Đồ án tốt nghiệp cử nhân",
+        bachelorThesisLink: "Phần mềm hỗ trợ cho Liên đoàn Điền kinh Đức (ODP)",
         moduleNames: {
           introProg: "Nhập môn Lập trình",
           digitalCircuits: "Mạch và Hệ thống Số",
@@ -419,6 +465,8 @@ const translations: Translations = {
           irw: "Kế toán quản trị",
           erw: "Kế toán tài chính",
           finanz: " Quản trị tài chính",
+          computationalLogic: "Computational Logic",
+          compilerConstruction: "Xây dựng trình biên dịch",
         },
         times: {
           wise2223: "Kỳ Đông 2022/23",
@@ -427,6 +475,7 @@ const translations: Translations = {
           sose24: "Kỳ Hè 2024",
           wise2425: "Kỳ Đông 2024/25",
           sose25: "Kỳ Hè 2025",
+          wise2526: "Kỳ Đông 2025/26",
         },
       },
       stk: {
@@ -470,14 +519,14 @@ const translations: Translations = {
     projects: {
       title: "CÁC DỰ ÁN",
       all: "Tất cả",
-      cat1: "Phát triển Web",
-      cat2: "Phát triển Game",
+      cat1: "Ứng dụng Web",
+      cat2: "Ứng dụng Desktop",
       cat3: "Mạng",
       cat4: "Kỹ thuật Phần mềm",
       portfolio: {
         name: "Trang web Portfolio",
         time: "09/2025",
-        desc: "Trang web portfolio cá nhân được xây dựng bằng React và TypeScript để giới thiệu các dự án và kỹ năng của tôi.",
+        desc: "Trang web portfolio cá nhân được xây dựng bằng React và TypeScript để giới thiệu các dự án và kỹ năng của tôi. Khám phá thêm về trang web và mã nguồn trên GitHub bên dưới.",
         role: "Vai trò: Lập trình viên chính",
         tech: "Công nghệ sử dụng: React, TypeScript, CSS",
         view: "Xem trang web",
@@ -485,7 +534,7 @@ const translations: Translations = {
       chess: {
         name: "Trò chơi cờ vua",
         time: "03/2023",
-        desc: "Đây là một dự án được thực hiện trong khuôn khổ môn Nhập môn Lập trình. Chúng tôi làm việc theo nhóm gồm 3 người và cùng nhau phát triển một trò chơi cờ vua đơn giản bằng Python, sử dụng PyQt để xây dựng giao diện đồ họa người dùng (GUI). Mục tiêu chính của dự án là giúp sinh viên làm quen với tư duy lập trình, làm việc nhóm và những khái niệm cơ bản trong phát triển phần mềm. Tìm hiểu thêm về mã nguồn trên GitHub bên dưới.",
+        desc: "Đây là một dự án được thực hiện trong khuôn khổ môn Nhập môn Lập trình. Chúng tôi làm việc theo nhóm gồm 3 người và cùng nhau phát triển một trò chơi cờ vua đơn giản bằng Python, sử dụng PyQt để xây dựng giao diện đồ họa người dùng (GUI). Mục tiêu chính của dự án là giúp sinh viên làm quen với tư duy lập trình, làm việc nhóm và những khái niệm cơ bản trong phát triển phần mềm.\n\nTìm hiểu thêm về mã nguồn trên GitHub bên dưới.",
         memNum: "Số thành viên nhóm: 3",
         role: "Vai trò: Lập trình viên",
         tech: "Công nghệ sử dụng: Python, PyQt5", 
@@ -493,7 +542,7 @@ const translations: Translations = {
       webserver: {
         name: "Webserver và phân tích mạng",
         time: "08/2025",
-        desc: "Đây là một thí nghiệm Phân tích Mạng và một Webserver đơn giản được phát triển trong khuôn khổ môn Mạng Truyền thông. Chúng tôi đã làm việc theo nhóm 2 người để phân tích dữ liệu lưu lượng mạng được ghi lại bằng Wireshark và triển khai một webserver đơn giản có thể xử lý các yêu cầu và phản hồi HTTP. Tìm hiểu thêm về dự án này trên Drive bên dưới.",
+        desc: "Đây là một thí nghiệm Phân tích Mạng và một Webserver đơn giản được phát triển trong khuôn khổ môn Mạng Truyền thông. Chúng tôi đã làm việc theo nhóm 2 người để phân tích dữ liệu lưu lượng mạng được ghi lại bằng Wireshark và triển khai một webserver đơn giản có thể xử lý các yêu cầu và phản hồi HTTP.\n\nTìm hiểu thêm về dự án này trên Drive bên dưới.",
         memNum: "Số thành viên nhóm: 2",
         role: "Vai trò: Lập trình viên",
         tech: "Công nghệ sử dụng: Python, Wireshark, LaTeX",
@@ -501,7 +550,7 @@ const translations: Translations = {
       aiSim: {
         name: "Giao diện mô phỏng Active Learning",
         time: "03/2025",
-        desc: "Đây là một ứng dụng web mô phỏng Active Learning được phát triển trong khuôn khổ môn Kỹ thuật Phần mềm. Chúng tôi đã làm việc trong một nhóm frontend gồm 6 người, phối hợp chặt chẽ với nhóm backend, tuân theo phương pháp Agile với bảng Kanban để theo dõi các nhiệm vụ và các sprint hàng tuần. Tìm hiểu thêm về mã nguồn trên GitHub bên dưới.",
+        desc: "Đây là một ứng dụng web mô phỏng Active Learning được phát triển trong khuôn khổ môn Kỹ thuật Phần mềm. Chúng tôi đã làm việc trong một nhóm frontend gồm 6 người, phối hợp chặt chẽ với nhóm backend, tuân theo phương pháp Agile với bảng Kanban để theo dõi các nhiệm vụ và các sprint hàng tuần.\n\nTìm hiểu thêm về mã nguồn trên GitHub bên dưới.",
         memNum: "Số thành viên nhóm: 6",
         role: "Vai trò: Lập trình viên frontend",
         tech: "Công nghệ sử dụng: React, TypeScript, CSS, ChakraUI",
@@ -509,11 +558,19 @@ const translations: Translations = {
       compiler: {
         name: "Xây dựng trình biên dịch",
         time: "04/2026",
-        desc: "Đây là một trình biên dịch đơn giản cho một ngôn ngữ lập trình nhỏ có tên 'MicroC', được phát triển trong khuôn khổ môn Xây dựng ngôn ngữ và trình biên dịch. Chúng tôi đã làm việc theo nhóm gồm 3 thành viên để triển khai lexer, parser, typechecker, lambdalifter, code generator và máy ảo sử dụng Haskell. Dự án nhằm cung cấp kinh nghiệm thực tế trong thiết kế và triển khai trình biên dịch, cũng như để hiểu sâu hơn về các khái niệm ngôn ngữ lập trình. Tìm hiểu thêm về mã nguồn trên GitHub bên dưới.",
+        desc: "Đây là một trình biên dịch đơn giản cho một ngôn ngữ lập trình nhỏ có tên 'MicroC', được phát triển trong khuôn khổ môn Xây dựng ngôn ngữ và trình biên dịch. Chúng tôi đã làm việc theo nhóm gồm 3 thành viên để triển khai lexer, parser, typechecker, lambdalifter, code generator và máy ảo sử dụng Haskell. Dự án nhằm cung cấp kinh nghiệm thực tế trong thiết kế và triển khai trình biên dịch, cũng như để hiểu sâu hơn về các khái niệm ngôn ngữ lập trình.\n\nTìm hiểu thêm về mã nguồn trên GitHub bên dưới.",
         memNum: "Số thành viên nhóm: 3",
         role: "Vai trò: Lập trình viên",
         tech: "Công nghệ sử dụng: Haskell",
       },
+      vata: {
+        name: "VATA - Video-based Athletics Timing Analyzer",
+        time: "05/2026 - 07/2026",
+        desc: "Đây là ứng dụng desktop dành cho hệ điều hành Windows, được phát triển trong khuôn khổ đồ án tốt nghiệp cử nhân. Phần mềm hỗ trợ phân tích thành tích thời gian của vận động viên điền kinh trong các nội dung chạy nước rút và chạy vượt rào dựa trên video mà không sử dụng trí tuệ nhân tạo. Ứng dụng cung cấp trình phát video với khả năng điều hướng theo từng khung hình, bảng dữ liệu tích hợp sử dụng các mẫu được thiết kế theo yêu cầu của khách hàng, cùng chức năng nhập và xuất dữ liệu theo định dạng mẫu tương ứng.\n\nTìm hiểu thêm về mã nguồn và dùng thử phần mềm thông qua đường dẫn GitHub bên dưới.\n\nLưu ý: Phiên bản phát hành và mã nguồn chỉ được cung cấp cho mục đích đánh giá trong quá trình tuyển dụng và dùng thử phần mềm. Vui lòng đọc kỹ các điều khoản cấp phép được đính kèm trong kho lưu trữ GitHub trước khi sử dụng.",
+        memNum: "Số thành viên nhóm: 1",
+        role: "Vai trò: Lập trình viên",
+        tech: "Công nghệ sử dụng: Python, PySide6",
+      }
     },
   },
   de: {
@@ -530,7 +587,7 @@ const translations: Translations = {
       intro3:
         "Informatikstudent",
       intro4:
-        "Willkommen auf meiner Portfolio Webseite! Ich bin Quan, 22 Jahre alt. Ich komme aus Vietnam und studiere derzeit Informatik an der Johannes Gutenberg Universität Mainz. Erkunde mehr über mich, meinen Bildungsweg, meine Berufserfahrungen und Projekte unten. Und zögere, eine Nachricht zu hinterlassen. Ich freue mich sehr auf den Austausch mit Dir.",
+        "Willkommen auf meiner Portfolio Webseite! Ich bin Quan, 23 Jahre alt. Ich komme aus Vietnam und studiere derzeit Informatik an der Johannes Gutenberg Universität Mainz. Erkunde mehr über mich, meinen Bildungsweg, meine Berufserfahrungen und Projekte unten. Und zögere, eine Nachricht zu hinterlassen. Ich freue mich sehr auf den Austausch mit Dir.",
       downloadCV: "Lebenslauf herunterladen",
       aboutBtn: "Über mich",
       educationBtn: "Ausbildung",
@@ -560,6 +617,11 @@ const translations: Translations = {
     },
     education: {
       title: "BILDUNGSWEG",
+      tud: {
+        name: "Technische Universität Darmstadt",
+        degree: "Master of Science - IT-Sicherheit",
+        time: "ab Okt 2026",
+      },
       jgu: {
         name: "Johannes Gutenberg Universität Mainz",
         degree: "Bachelor of Science - Informatik",
@@ -574,6 +636,9 @@ const translations: Translations = {
         project1: "Spiel (Einführung in die Programmierung)",
         project2: "Software Engineering (Agile Methoden)",
         project3: "Webserver und Netzwerkanalyse (Kommunikationsnetze)",
+        project4: "Compilerbau",
+        bachelorThesis: "Bachelorarbeit",
+        bachelorThesisLink: "Unterstützungssoftware Videotagging beim Deutschen Leichtathletikverband (ODP)",
         moduleNames: {
           introProg: "Einführung in die Programmierung",
           digitalCircuits: "Technische Grundlage der Informatik",
@@ -591,6 +656,8 @@ const translations: Translations = {
           irw: "Internes Rechnungswesen",
           erw: "Externes Rechnungswesen",
           finanz: "Finanzwirtschaft",
+          computationalLogic: "Computationale Logik",
+          compilerConstruction: "Sprach- und Compilerbau",
         },
         times: {
           wise2223: "WiSe 2022/23",
@@ -599,6 +666,7 @@ const translations: Translations = {
           sose24: "SoSe 2024",
           wise2425: "WiSe 2024/25",
           sose25: "SoSe 2025",
+          wise2526: "WiSe 2025/26",
         },
       },
       stk: {
@@ -642,8 +710,8 @@ const translations: Translations = {
     projects: {
       title: "PROJEKTE",
       all: "Alle",
-      cat1: "Webentwicklung",
-      cat2: "Spielentwicklung",
+      cat1: "Web-Anwendungen",
+      cat2: "Desktop-Anwendungen",
       cat3: "Netzwerk",
       cat4: "Softwaretechnik",
       portfolio: {
@@ -657,7 +725,7 @@ const translations: Translations = {
       chess: {
         name: "Schachspiel",
         time: "Mär. 2023",
-        desc: "Dieses Projekt wurde im Rahmen des Moduls Einführung in die Programmierung durchgeführt. In einem Team von drei Personen entwickelten wir ein einfaches Schachspiel mit Python, wobei PyQt zur Umsetzung der grafischen Benutzeroberfläche (GUI) eingesetzt wurde. Ziel des Projekts war es, erste praktische Erfahrungen in der Programmierung, der Teamarbeit sowie in grundlegenden Konzepten der Softwareentwicklung zu sammeln. Erfahre mehr über den Quellcode auf GitHub unten.",
+        desc: "Dieses Projekt wurde im Rahmen des Moduls Einführung in die Programmierung durchgeführt. In einem Team von drei Personen entwickelten wir ein einfaches Schachspiel mit Python, wobei PyQt zur Umsetzung der grafischen Benutzeroberfläche (GUI) eingesetzt wurde. Ziel des Projekts war es, erste praktische Erfahrungen in der Programmierung, der Teamarbeit sowie in grundlegenden Konzepten der Softwareentwicklung zu sammeln.\n\nErfahre mehr über den Quellcode auf GitHub unten.",
         memNum: "Teammitglieder: 3",
         role: "Rolle: Entwickler",
         tech: "Technologie-Stack: Python, PyQt5",
@@ -665,7 +733,7 @@ const translations: Translations = {
       webserver: {
         name: "Webserver und Netzwerkanalyse",
         time: "Aug. 2025",
-        desc: "Dies ist ein Netzwerk-Analyse-Labor und ein einfacher Webserver, der im Rahmen des Kurses Kommunikationsnetze entwickelt wurde. Wir arbeiteten in einem 2-köpfigen Team, um Netzwerkverkehrsdaten zu analysieren, die von Wireshark erfasst wurden, und implementierten einen einfachen Webserver, der HTTP-Anfragen und -Antworten verarbeiten kann. Erfahre mehr über dieses Labor auf Drive unten.",
+        desc: "Dies ist ein Netzwerk-Analyse-Labor und ein einfacher Webserver, der im Rahmen des Kurses Kommunikationsnetze entwickelt wurde. Wir arbeiteten in einem 2-köpfigen Team, um Netzwerkverkehrsdaten zu analysieren, die von Wireshark erfasst wurden, und implementierten einen einfachen Webserver, der HTTP-Anfragen und -Antworten verarbeiten kann.\n\nErfahre mehr über dieses Labor auf Drive unten.",
         memNum: "Teammitglieder: 2",
         role: "Rolle: Entwickler",
         tech: "Technologie-Stack: Python, Wireshark, LaTeX",
@@ -673,7 +741,7 @@ const translations: Translations = {
       aiSim: {
         name: "Active Learning Simulation UI",
         time: "Mär 2025",
-        desc: "Dies ist eine Active Learning Simulation Webanwendung, die im Rahmen des Kurses Software Engineering entwickelt wurde. Wir arbeiteten in einem 6-köpfigen Frontend-Team, das eng mit einem Backend-Team zusammenarbeitete und der agilen Methodik mit Kanban-Board für die Aufgabenverfolgung und wöchentliche Sprints folgte. Erfahre mehr über den Quellcode auf GitHub unten.",
+        desc: "Dies ist eine Active Learning Simulation Webanwendung, die im Rahmen des Kurses Software Engineering entwickelt wurde. Wir arbeiteten in einem 6-köpfigen Frontend-Team, das eng mit einem Backend-Team zusammenarbeitete und der agilen Methodik mit Kanban-Board für die Aufgabenverfolgung und wöchentliche Sprints folgte.\n\nErfahre mehr über den Quellcode auf GitHub unten.",
         memNum: "Teammitglieder: 6",
         role: "Rolle: Frontend-Entwickler",
         tech: "Technologie-Stack: React, TypeScript, CSS, ChakraUI",
@@ -681,10 +749,18 @@ const translations: Translations = {
       compiler: {
         name: "Compiler Construction",
         time: "Apr. 2026",
-        desc: "Dies ist ein einfacher Compiler für eine kleine Programmiersprache namens 'MicroC', der im Rahmen des Kurses Compiler Construction entwickelt wurde. Wir arbeiteten in einem Team von 3 Mitgliedern, um den Lexer, Parser, Typechecker, Lambdalifter, Code Generator und die virtuelle Maschine mit Haskell zu implementieren. Das Projekt zielte darauf ab, praktische Erfahrungen im Design und der Implementierung von Compilern zu sammeln sowie unser Verständnis von Konzepten der Programmiersprachen zu vertiefen. Erfahre mehr über den Quellcode auf GitHub unten.",
+        desc: "Dies ist ein einfacher Compiler für eine kleine Programmiersprache namens 'MicroC', der im Rahmen des Kurses Compiler Construction entwickelt wurde. Wir arbeiteten in einem Team von 3 Mitgliedern, um den Lexer, Parser, Typechecker, Lambdalifter, Code Generator und die virtuelle Maschine mit Haskell zu implementieren. Das Projekt zielte darauf ab, praktische Erfahrungen im Design und der Implementierung von Compilern zu sammeln sowie unser Verständnis von Konzepten der Programmiersprachen zu vertiefen.\n\nErfahre mehr über den Quellcode auf GitHub unten.",
         memNum: "Teammitglieder: 3",
         role: "Rolle: Entwickler",
         tech: "Technologie-Stack: Haskell",
+      },
+      vata: {
+        name: "VATA - Video-based Athletics Timing Analyzer",
+        time: "Mai 2026 - Jul. 2026",
+        desc: "Diese Desktopanwendung für Windows wurde im Rahmen einer Bachelorarbeit entwickelt. Die Software unterstützt die videobasierte Analyse der Laufzeiten von Leichtathletinnen und Leichtathleten in Sprint- und Hürdenlaufdisziplinen, ohne dabei künstliche Intelligenz einzusetzen. Die Anwendung bietet einen Videoplayer mit bildgenauer Navigation, eine integrierte Datentabelle mit kundenspezifisch entwickelten Vorlagen sowie Funktionen zum Import und Export von Daten entsprechend den vorgegebenen Kundenvorlagen.\n\nWeitere Informationen zum Quellcode sowie eine Testversion der Software sind über das unten angegebene GitHub-Repository verfügbar.\n\nHinweis: Die veröffentlichte Version und der Quellcode werden ausschließlich zu Testzwecken und zur Bewertung im Rahmen von Bewerbungs- und Auswahlverfahren bereitgestellt. Bitte lesen Sie vor der Nutzung die im GitHub-Repository enthaltenen Lizenzbedingungen sorgfältig durch.",
+        memNum: "Teammitglieder: 1",
+        role: "Rolle: Entwickler",
+        tech: "Technologie-Stack: Python, PySide6",
       },
     },
   },

@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { FaBookOpen, FaGraduationCap, FaChevronDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "../styles/education.css";
 import NavBar from "../components/navbar.tsx";
 import { useLanguage } from "../i18n/LanguageContext";
 
+import TUD from "../assets/logo/tu_darmstadt.webp";
 import JGU from "../assets/logo/uni-mainz.png";
 import STK from "../assets/logo/uni-marburg.jpg";
 import THPT from "../assets/logo/thpt-cnn.png";
@@ -29,6 +31,23 @@ const Education = () => {
         </div>
 
         <div className="edu-timeline">
+          {/* TU Darmstadt - static card (expand disabled) */}
+          <div className="edu-timeline-item">
+            <div className="edu-timeline-icon">
+              <FaBookOpen className="studying-icon" />
+            </div>
+            <div className="edu-timeline-card">
+              <div className="edu-card-header">
+                <img src={TUD} className="edu-logo" alt="TU Darmstadt" />
+                <div className="edu-content">
+                  <h3 className="edu-name">{t("education.tud.name")}</h3>
+                  <p className="edu-degree">{t("education.tud.degree")}</p>
+                </div>
+                <div className="edu-time">{t("education.tud.time")}</div>
+              </div>
+            </div>
+          </div>
+
           {/* Uni */}
           <div className="edu-timeline-item">
             <div className="edu-timeline-icon">
@@ -65,11 +84,38 @@ const Education = () => {
                     <div className="uni-details-right">
                       <h4>{t("education.jgu.projects")}</h4>
                       <ul>
-                        <li>{t("education.jgu.project1")}</li>
-                        <li>{t("education.jgu.project2")}</li>
-                        <li>{t("education.jgu.project3")}</li>
+                        <li>
+                          <Link className="education-project-link" to="/projects?open=chess">
+                            {t("education.jgu.project1")}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="education-project-link" to="/projects?open=aiSim">
+                            {t("education.jgu.project2")}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="education-project-link" to="/projects?open=webserver">
+                            {t("education.jgu.project3")}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link className="education-project-link" to="/projects?open=compiler">
+                            {t("education.jgu.project4")}
+                          </Link>
+                        </li>
                       </ul>
                     </div>
+                  </div>
+
+                  <div className="bachelor-thesis">
+                    <h4>{t("education.jgu.bachelorThesis")}</h4>
+                    <Link
+                      className="bachelor-thesis-link"
+                      to="/projects?open=vata"
+                    >
+                      {t("education.jgu.bachelorThesisLink")}
+                    </Link>
                   </div>
 
                   <h4 className="uni-modules-title">{t("education.jgu.modules")}</h4>
@@ -172,8 +218,21 @@ const Education = () => {
                           <span className="uni-module-time">{t("education.jgu.times.sose25")}</span>
                         </div>
                       </div>
+                      <div className="uni-module">
+                        <div className="uni-module-header">
+                          <span className="uni-module-title">{t("education.jgu.moduleNames.computationalLogic")}</span>
+                          <span className="uni-module-time">{t("education.jgu.times.wise2526")}</span>
+                        </div>
+                      </div>
+                      <div className="uni-module">
+                        <div className="uni-module-header">
+                          <span className="uni-module-title">{t("education.jgu.moduleNames.compilerConstruction")}</span>
+                          <span className="uni-module-time">{t("education.jgu.times.wise2526")}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
