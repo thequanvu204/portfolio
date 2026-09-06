@@ -17,6 +17,7 @@ import CompilerShowcase from "../assets/compiler_showcase.png";
 import VATA from "../assets/vata.png";
 import VATAMainDisplay from "../assets/vata_main_display.png";
 import VATAImportedDisplay from "../assets/vata_imported.png";
+import BruteForce from "../assets/brute_force_main_display.png";
 
 type Project = {
   name: string;
@@ -37,25 +38,23 @@ const Projects = () => {
   const { t } = useLanguage();
   const [searchParams] = useSearchParams();
 
-  const createVataProject = (): Project => ({
-    name: t("projects.vata.name"),
-    time: t("projects.vata.time"),
-    desc: t("projects.vata.desc"),
-    memNum: t("projects.vata.memNum"),
-    role: t("projects.vata.role"),
-    tech: t("projects.vata.tech"),
-    img: VATAMainDisplay,
-    images: [VATAMainDisplay, VATAImportedDisplay],
-    tags: ["Python", "PySide6"],
-    category: ["cat2", "cat4"],
-    view: [{ label: "Releases", url: "https://github.com/thequanvu204/vata/releases" }],
-    link: [{ label: "GitHub", url: "https://github.com/thequanvu204/vata" }],
-  });
-
   const createLinkedProject = (projectKey: string | null): Project | null => {
     switch (projectKey) {
       case "vata":
-        return createVataProject();
+        return {
+          name: t("projects.vata.name"),
+          time: t("projects.vata.time"),
+          desc: t("projects.vata.desc"),
+          memNum: t("projects.vata.memNum"),
+          role: t("projects.vata.role"),
+          tech: t("projects.vata.tech"),
+          img: VATAMainDisplay,
+          images: [VATAMainDisplay, VATAImportedDisplay],
+          tags: ["Python", "PySide6", "OpenCV", "openpyxl", "pypdf"],
+          category: ["cat2", "cat4"],
+          view: [{ label: "Releases", url: "https://github.com/thequanvu204/vata/releases" }],
+          link: [{ label: "GitHub", url: "https://github.com/thequanvu204/vata" }],
+        };
       case "chess":
         return {
           name: t("projects.chess.name"),
@@ -223,6 +222,48 @@ const Projects = () => {
             </div>
           )}
 
+          {/* Brute Force Detector Project */}
+          {matchCategory({
+            name: t("projects.bruteforce.name"),
+            time: t("projects.bruteforce.time"),
+            desc: t("projects.bruteforce.desc"),
+            img: BruteForce ,
+            tags: ["Python", "PySide6"],
+            category: ["cat2"],
+          }) && (
+            <div
+              className="prj-card"
+              onClick={() =>
+                handleOpen({
+                  name: t("projects.bruteforce.name"),
+                  time: t("projects.bruteforce.time"),
+                  desc: t("projects.bruteforce.desc"),
+                  memNum: t("projects.bruteforce.memNum"),
+                  role: t("projects.bruteforce.role"),
+                  tech: t("projects.bruteforce.tech"),
+                  img: BruteForce,
+                  images: [BruteForce],
+                  tags: ["Python", "PySide6"],
+                  category: ["cat2"],
+                  view: [{ label: "Releases", url: "https://github.com/thequanvu204/brute-force-detector/releases/tag/v1.0.0" }],
+                  link: [{ label: "GitHub", url: "https://github.com/thequanvu204/brute-force-detector" }],
+                })
+              }
+            >
+              <div className="prj-img">
+                <img src={BruteForce} alt="Brute Force Detector" />
+              </div>
+              <div className="prj-info">
+                <h3 className="prj-name">{t("projects.bruteforce.name")}</h3>
+                <p className="prj-time">{t("projects.bruteforce.time")}</p>
+                <div className="prj-tags">
+                  <span className="tag">Python</span>
+                  <span className="tag">PySide6</span>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* VATA Project */}
           {matchCategory({
             name: t("projects.vata.name"),
@@ -230,11 +271,26 @@ const Projects = () => {
             desc: t("projects.vata.desc"),
             img: VATA,
             tags: ["Python", "PySide6", "OpenCV", "openpyxl", "pypdf"],
-            category: ["cat2","cat4"],
+            category: ["cat2", "cat4"],
           }) && (
             <div
               className="prj-card"
-              onClick={() => handleOpen(createVataProject())}
+              onClick={() =>
+                handleOpen({
+                  name: t("projects.vata.name"),
+                  time: t("projects.vata.time"),
+                  desc: t("projects.vata.desc"),
+                  memNum: t("projects.vata.memNum"),
+                  role: t("projects.vata.role"),
+                  tech: t("projects.vata.tech"),
+                  img: VATAMainDisplay,
+                  images: [VATAMainDisplay, VATAImportedDisplay],
+                  tags: ["Python", "PySide6", "OpenCV", "openpyxl", "pypdf"],
+                  category: ["cat2", "cat4"],
+                  view: [{ label: "Releases", url: "https://github.com/thequanvu204/vata/releases" }],
+                  link: [{ label: "GitHub", url: "https://github.com/thequanvu204/vata" }],
+                })
+              }
             >
               <div className="prj-img">
                 <img src={VATA} alt="VATA" />

@@ -181,6 +181,14 @@ type Translation = {
       role?: string;
       tech?: string;
     };
+    bruteforce: {
+      name: string;
+      time: string; 
+      desc?: string;  
+      memNum?: string;
+      role?: string;
+      tech?: string;
+    }
   };
 };
 
@@ -336,7 +344,7 @@ const translations: Translations = {
         name: "Portfolio Website",
         time: "Sep 2025",
         desc: "This is my personal portfolio website to introduce myself, my journey and some projects that I have worked on. Explore more about the website and source code on GitHub below.",
-        role: "Role: Main Developer",
+        role: "Role: Developer",
         tech: "Tech Stack: React, TypeScript, CSS",
         view: "View Website",
       },
@@ -376,6 +384,14 @@ const translations: Translations = {
         name: "VATA - Video-based Athletics Timing Analyzer",
         time: "May 2026 - Jul 2026",
         desc: "This Windows desktop application was developed as part of a bachelor’s thesis project. The software supports video-based analysis of athletes’ running times in sprint and hurdle events without the use of artificial intelligence. The application provides a video player with frame-by-frame navigation, an integrated data table based on templates developed according to the client’s requirements, and data import and export functions that follow the corresponding client-specific formats.\n\nFurther information about the source code and a trial version of the software can be found in the GitHub repository linked below.\n\nNotice: The release version and source code are provided exclusively for testing purposes and for evaluation during recruitment and selection processes. Please read the licence terms included in the GitHub repository carefully before using the software.",
+        memNum: "Team members: 1",
+        role: "Role: Developer",
+        tech: "Tech Stack: Python, PySide6",
+      },
+      bruteforce: {
+        name: "Simple Brute-force Detection Tool",
+        time: "Sep 2026",
+        desc: "This is a Windows desktop application designed to monitor the Windows Security Event Log in real time and detect signs of brute-force attacks. The software tracks successful and failed login attempts, analyzes activity by IP address, and generates alerts when unusual login patterns are detected.\n\nExplore more about source code and a trial version of the software in the GitHub repository linked below.",
         memNum: "Team members: 1",
         role: "Role: Developer",
         tech: "Tech Stack: Python, PySide6",
@@ -527,7 +543,7 @@ const translations: Translations = {
         name: "Trang web Portfolio",
         time: "09/2025",
         desc: "Trang web portfolio cá nhân được xây dựng bằng React và TypeScript để giới thiệu các dự án và kỹ năng của tôi. Khám phá thêm về trang web và mã nguồn trên GitHub bên dưới.",
-        role: "Vai trò: Lập trình viên chính",
+        role: "Vai trò: Lập trình viên",
         tech: "Công nghệ sử dụng: React, TypeScript, CSS",
         view: "Xem trang web",
       },
@@ -570,7 +586,15 @@ const translations: Translations = {
         memNum: "Số thành viên nhóm: 1",
         role: "Vai trò: Lập trình viên",
         tech: "Công nghệ sử dụng: Python, PySide6",
-      }
+      },
+      bruteforce: {
+        name: "Trình phát hiện Brute-force đơn giản",
+        time: "09/2026",
+        desc: "Đây là một ứng dụng desktop dành cho Windows, được phát triển để theo dõi Windows Security Event Log theo thời gian thực và phát hiện các dấu hiệu của một cuộc tấn công brute-force. Phần mềm giám sát các lần đăng nhập thành công và thất bại, phân tích hành vi theo địa chỉ IP và tạo cảnh báo khi phát hiện các mẫu đăng nhập bất thường.\n\nTìm hiểu thêm về mã nguồn và dùng thử phần mềm thông qua đường dẫn GitHub bên dưới.",
+        memNum: "Số thành viên nhóm: 1",
+        role: "Vai trò: Lập trình viên",
+        tech: "Công nghệ sử dụng: Python, PySide6",
+      },
     },
   },
   de: {
@@ -718,7 +742,7 @@ const translations: Translations = {
         name: "Portfolio Webseite",
         time: "Sept. 2025",
         desc: "Dies ist meine persönliche Portfolio-Webseite, um mich, meinen Werdegang und einige Projekte, an denen ich gearbeitet habe, vorzustellen. Erfahre mehr über die Webseite und den Quellcode auf GitHub unten.",
-        role: "Rolle: Hauptentwickler",
+        role: "Rolle: Entwickler",
         tech: "Technologie-Stack: React, TypeScript, CSS",
         view: "Webseite ansehen",
       },
@@ -758,6 +782,14 @@ const translations: Translations = {
         name: "VATA - Video-based Athletics Timing Analyzer",
         time: "Mai 2026 - Jul. 2026",
         desc: "Diese Desktopanwendung für Windows wurde im Rahmen einer Bachelorarbeit entwickelt. Die Software unterstützt die videobasierte Analyse der Laufzeiten von Leichtathletinnen und Leichtathleten in Sprint- und Hürdenlaufdisziplinen, ohne dabei künstliche Intelligenz einzusetzen. Die Anwendung bietet einen Videoplayer mit bildgenauer Navigation, eine integrierte Datentabelle mit kundenspezifisch entwickelten Vorlagen sowie Funktionen zum Import und Export von Daten entsprechend den vorgegebenen Kundenvorlagen.\n\nWeitere Informationen zum Quellcode sowie eine Testversion der Software sind über das unten angegebene GitHub-Repository verfügbar.\n\nHinweis: Die veröffentlichte Version und der Quellcode werden ausschließlich zu Testzwecken und zur Bewertung im Rahmen von Bewerbungs- und Auswahlverfahren bereitgestellt. Bitte lesen Sie vor der Nutzung die im GitHub-Repository enthaltenen Lizenzbedingungen sorgfältig durch.",
+        memNum: "Teammitglieder: 1",
+        role: "Rolle: Entwickler",
+        tech: "Technologie-Stack: Python, PySide6",
+      },
+      bruteforce: {
+        name: "Einfaches Brute-force-Erkennungstool",
+        time: "Sep. 2026",
+        desc: "Dies ist eine Desktop-Anwendung für Windows, die das Windows Security Event Log in Echtzeit überwacht und Anzeichen von Brute-Force-Angriffen erkennt. Die Software erfasst erfolgreiche und fehlgeschlagene Anmeldeversuche, analysiert das Verhalten anhand der IP-Adresse und erstellt Warnmeldungen, sobald ungewöhnliche Anmeldemuster erkannt werden.\n\nErfahre mehr über den Quellcode und eine Testversion der Software im unten verlinkten GitHub-Repository.",
         memNum: "Teammitglieder: 1",
         role: "Rolle: Entwickler",
         tech: "Technologie-Stack: Python, PySide6",
