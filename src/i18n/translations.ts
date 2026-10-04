@@ -246,7 +246,7 @@ const translations: Translations = {
       tud: {
         name: "Technical University of Darmstadt",
         degree: "Master of Science - IT Security",
-        time: "from Oct 2026",
+        time: "Oct 2026 - now",
       },
       jgu: {
         name: "Johannes Gutenberg University of Mainz",
@@ -264,7 +264,7 @@ const translations: Translations = {
         project3: "Webserver and Network Analytics (Communication Networks)",
         project4: "Compiler Construction",
         bachelorThesis: "Bachelor's Thesis",
-        bachelorThesisLink: "Videotagging support software for the German Athletics Association (ODP)",
+        bachelorThesisLink: "Videotagging support software for the German Athletics Association (DLV)",
         moduleNames: {
           introProg: "Introduction to Programming",
           digitalCircuits: "Digital Circuits and Systems",
@@ -323,7 +323,7 @@ const translations: Translations = {
       conscia: {
         name: "Conscia Germany Ltd.",
         position: "Working Student IT - Service Technician",
-        time: "Jul 2025 - now",
+        time: "Jul 2025 - Sep 2026",
         companyDesc: "Conscia Germany Ltd. is an IT consulting company that belongs to the international Conscia Group, which specializes in IT infrastructure, cybersecurity and cloud management solutions. The company implemented a project to provide multimedia entertainment services for patients at the University Medical Center Mainz. Through the BEWATEC ConnectedCare solution, Conscia is responsible for the deployment, operation, and maintenance of bedside entertainment systems, offering services such as movies, music, internet access, and hospital information.",
         mainTasks: "My main tasks",
         taskContent: 
@@ -445,7 +445,7 @@ const translations: Translations = {
       tud: {
         name: "Đại học Kỹ thuật Darmstadt",
         degree: "Cử nhân khoa học - An toàn thông tin",
-        time: "từ 10/2026",
+        time: "10/2026 đến nay",
       },
       jgu: {
         name: "Đại học Johannes Gutenberg Mainz",
@@ -463,7 +463,7 @@ const translations: Translations = {
         project3: "Webserver và Phân tích mạng (Mạng máy tính)",
         project4: "Xây dựng trình biên dịch",
         bachelorThesis: "Đồ án tốt nghiệp cử nhân",
-        bachelorThesisLink: "Phần mềm hỗ trợ cho Liên đoàn Điền kinh Đức (ODP)",
+        bachelorThesisLink: "Phần mềm hỗ trợ cho Liên đoàn Điền kinh Đức (DLV)",
         moduleNames: {
           introProg: "Nhập môn Lập trình",
           digitalCircuits: "Mạch và Hệ thống Số",
@@ -522,7 +522,7 @@ const translations: Translations = {
       conscia: {
         name: "Công ty TNHH Conscia Đức",
         position: "Sinh viên làm thêm IT - Kỹ thuật viên dịch vụ",
-        time: "07/2025 đến nay",
+        time: "07/2025 - 09/2026",
         companyDesc: "Công ty TNHH Conscia Đức là công ty tư vấn CNTT thuộc Tập đoàn Conscia Group - một tập đoàn đa quốc gia chuyên về giải pháp hạ tầng IT, an ninh mạng và quản lý đám mây. Công ty đã triển khai dự án cung cấp dịch vụ giải trí đa phương tiện cho bệnh nhân tại Bệnh viện Đại học Mainz. Thông qua giải pháp BEWATEC ConnectedCare, Conscia chịu trách nhiệm triển khai, vận hành và bảo trì hệ thống giải trí tại giường bệnh, bao gồm các dịch vụ như xem phim, nghe nhạc, truy cập Internet và cung cấp thông tin bệnh viện.",
         mainTasks: "Công việc chính của tôi",
         taskContent: 
@@ -644,12 +644,12 @@ const translations: Translations = {
       tud: {
         name: "Technische Universität Darmstadt",
         degree: "Master of Science - IT-Sicherheit",
-        time: "ab Okt 2026",
+        time: "Okt 2026 bisher",
       },
       jgu: {
         name: "Johannes Gutenberg Universität Mainz",
         degree: "Bachelor of Science - Informatik",
-        time: "Okt 2022 - heute",
+        time: "Okt 2022 bisher",
         focus: "Schwerpunkt",
         projects: "Projekte",
         major: "Hauptfach",
@@ -662,7 +662,7 @@ const translations: Translations = {
         project3: "Webserver und Netzwerkanalyse (Kommunikationsnetze)",
         project4: "Compilerbau",
         bachelorThesis: "Bachelorarbeit",
-        bachelorThesisLink: "Unterstützungssoftware Videotagging beim Deutschen Leichtathletikverband (ODP)",
+        bachelorThesisLink: "Unterstützungssoftware Videotagging beim Deutschen Leichtathletikverband (DLV)",
         moduleNames: {
           introProg: "Einführung in die Programmierung",
           digitalCircuits: "Technische Grundlage der Informatik",
@@ -721,7 +721,7 @@ const translations: Translations = {
       conscia: {
         name: "Conscia Deutschland GmbH",
         position: "Werkstudent IT - Service Techniker",
-        time: "Jul. 2025 bisher",
+        time: "Jul. 2025 - Sept. 2026",
         companyDesc: "Die Conscia Deutschland GmbH ist ein IT-Beratungsunternehmen und Teil der internationalen Conscia Group, die auf IT-Infrastruktur, Cybersicherheit und Cloud-Management spezialisiert ist. Das Unternehmen hat ein Projekt zur Bereitstellung von multimedialen Entertainmentsdiensten für Patienten am Universitätsklinikum Mainz umgesetzt. Mit der Lösung BEWATEC ConnectedCare übernimmt Conscia die Implementierung, den Betrieb und die Wartung des Entertainmentssystems am Patientenbett, das Dienste wie Filme, Musik, Internetzugang und Krankenhausinformationen bietet.",
         mainTasks: "Meine Hauptarbeit",
         taskContent: 
