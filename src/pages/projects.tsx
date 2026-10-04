@@ -228,7 +228,7 @@ const Projects = () => {
             time: t("projects.bruteforce.time"),
             desc: t("projects.bruteforce.desc"),
             img: BruteForce ,
-            tags: ["Python", "PySide6"],
+            tags: ["Python", "PySide6", "VirtualBox"],
             category: ["cat2"],
           }) && (
             <div
@@ -243,7 +243,7 @@ const Projects = () => {
                   tech: t("projects.bruteforce.tech"),
                   img: BruteForce,
                   images: [BruteForce],
-                  tags: ["Python", "PySide6"],
+                  tags: ["Python", "PySide6", "VirtualBox"],
                   category: ["cat2"],
                   view: [{ label: "Releases", url: "https://github.com/thequanvu204/brute-force-detector/releases/tag/v1.0.0" }],
                   link: [{ label: "GitHub", url: "https://github.com/thequanvu204/brute-force-detector" }],
@@ -259,6 +259,7 @@ const Projects = () => {
                 <div className="prj-tags">
                   <span className="tag">Python</span>
                   <span className="tag">PySide6</span>
+                  <span className="tag">VirtualBox</span>
                 </div>
               </div>
             </div>
